@@ -35,12 +35,9 @@ async function discoverTeams() {
     });
     const html = await res.text();
     for (const m of html.matchAll(/\/mannschaften\/[^/"']+\/([0-9A-Z]{32})/g)) found.push(m[1]);
-    const imgs = [...new Set([...html.matchAll(/(?:src|data-src|srcset)="([^"]*(?:logo|Logo|media)[^"]*)"/g)].map((m) => m[1]))];
-    console.log('Bild-Adressen auf der Vereinsseite:', imgs.slice(0, 12));
   } catch (e) {
     console.warn('Vereinsseite nicht abrufbar:', e.message);
   }
-  console.log('Gefundene Mannschafts-IDs:', [...new Set(found)]);
   return found;
 }
 
@@ -69,10 +66,10 @@ if (!teams.length) {
 }
 
 // Vereinslogos lokal ablegen, damit die Seite sie ins Bild zeichnen darf (gleiche Herkunft)
-const LOGO_URLS = (id) => [
-  `https://service-prod.bfv.de/export.media?action=getLogo&format=7&id=${id}`,
-  `https://service-prod.bfv.de/export.media?action=getLogo&format=3&id=${id}`,
-];
+// Gleiche Adressen wie auf bfv.de (format 7 = groß, 5 = klein)
+const LOGO_URLS = (id) => [7, 5].map(
+  (f) => `https://app.bfv.de/export.media/-/action/getLogo/format/${f}/id/${id}/verband/00ES8GNCQK000000VV0AG08LVUPGND5I/strat_code/bfv`,
+);
 const logos = {};
 await mkdir(new URL('logos/', root), { recursive: true });
 const clubIds = new Set();
