@@ -8,18 +8,16 @@ jobs:
     steps:
       - run: |
           C=016G94T91K000000VV0AG80NVUNAS2C2
-          A=https://widget-prod.bfv.de/api/service/widget/v1
-          for p in "club/$C/matches" "club/$C/info" "club/$C/teams" "club/$C/nextmatches" "club/$C/lastmatches"; do
-            echo "=== $A/$p"; curl -sS -m 20 "$A/$p" | head -c 1500; echo
+          for p in naechste letzte; do
+            echo "=================== $p"
+            curl -sS -m 20 -A "Mozilla/5.0" "https://www.bfv.de/partial/vereinsprofil/spielplan/$C/$p" -o $p.html
+            wc -c $p.html
+            # Text ohne Tags, kompakt
+            sed -e 's/<[^>]*>/ /g' $p.html | tr -s ' \n\t' ' ' | fold -w 220 | head -60
+            echo; echo "--- Links"
+            grep -oE 'href="[^"]*"' $p.html | sort -u | head -40
+            echo "--- erste 2500 Zeichen Roh-HTML"
+            head -c 2500 $p.html; echo
           done
-          echo "=== Vereinsseite: Links"
-          curl -sS -m 20 -A "Mozilla/5.0" "https://www.bfv.de/vereine/jfg-rothsee-sued/$C" -o club.html
-          grep -oE 'href="[^"]*(spiel|match|partial)[^"]*"' club.html | sort -u | head -40
-          grep -oE 'data-[a-z-]*(url|src|href)="[^"]*"' club.html | sort -u | head -40
-          grep -oE '"/partial/[^"]*"|/partial/[^"'"'"' ]*' club.html | sort -u | head -40
-          echo "=== Spiele-Unterseite"
-          for u in "https://www.bfv.de/vereine/jfg-rothsee-sued/$C/spiele" "https://www.bfv.de/vereine/jfg-rothsee-sued/$C/spielplan"; do
-            echo "--- $u"; curl -sS -m 20 -A "Mozilla/5.0" -o sp.html -w "%{http_code}\n" "$u"
-            grep -oE 'href="/spiele/[^"]*"' sp.html | sort -u | head -60
-            grep -oE '/partial/[^"'"'"' ]*' sp.html | sort -u | head -20
-          done
+          echo "=================== Mannschaftsliste"
+          curl -sS -m 20 -A "Mozilla/5.0" "https://www.bfv.de/partial/vereinsprofil/mannschaftsliste/$C" | grep -oE 'href="/mannschaften/[^"]*"' | sort -u
