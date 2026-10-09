@@ -7,6 +7,7 @@ export const FORMATS = {
   '3:4': { h: 1440, t: 0, b: 0, name: 'Beitrag 3:4 (1080 × 1440)' },
   '1:1': { h: 1080, t: 0, b: 0, name: 'Quadrat 1:1 (1080 × 1080)' },
   '9:16': { h: 1920, t: 200, b: 250, name: 'Story 9:16 (1080 × 1920)' },
+  '4:3': { h: 810, t: 0, b: 0, name: 'Querformat 4:3 (1080 × 810)' },
 };
 export let H = 1350;
 let T = 0;
@@ -190,7 +191,9 @@ export function drawCover(ctx, s, a) {
   g.addColorStop(1, 'rgba(6,16,38,0)');
   ctx.fillStyle = g;
   ctx.fillRect(0, 0, W, 300);
-  const fadeY = H - B - 710;
+  // Bei Querformat (wenig Höhe) wird die Anzeigetafel kleiner, damit das Foto sichtbar bleibt
+  const k = H - T - B < 1000 ? 0.66 : 1;
+  const fadeY = H - B - 710 * k;
   g = ctx.createLinearGradient(0, fadeY, 0, H);
   g.addColorStop(0, 'rgba(10,26,58,0)');
   g.addColorStop(0.45, 'rgba(10,26,58,0.88)');
@@ -214,14 +217,14 @@ export function drawCover(ctx, s, a) {
   }
 
   // Überschrift
-  const top = H - B - 530;
+  const top = H - B - 530 * k;
   ctx.textAlign = 'left';
   ctx.textBaseline = 'alphabetic';
   ctx.fillStyle = C.sky;
-  ctx.font = font(52, 800, true);
-  spaced(ctx, (s.kicker || '').toUpperCase(), 56, top, 4);
+  ctx.font = font(52 * k, 800, true);
+  spaced(ctx, (s.kicker || '').toUpperCase(), 56, top, 4 * k);
   ctx.fillStyle = C.sky;
-  ctx.fillRect(56, top + 18, 120, 6);
+  ctx.fillRect(56, top + 18 * k, 120 * k, 6 * k);
 
   // Anzeigetafel: zwei Zeilen Heim / Gast
   const res = (s.result || '').split(':');
@@ -230,30 +233,30 @@ export function drawCover(ctx, s, a) {
     { name: s.home, logo: a.homeLogo, score: res[0], own: s.isHome },
     { name: s.guest, logo: a.guestLogo, score: res[1], own: !s.isHome },
   ];
-  const rowH = 128;
-  const y0 = top + 56;
-  const scoreW = hasResult ? 150 : 0;
+  const rowH = 128 * k;
+  const y0 = top + 56 * k;
+  const scoreW = hasResult ? 150 * k : 0;
   rows.forEach((r, i) => {
-    const y = y0 + i * (rowH + 14);
+    const y = y0 + i * (rowH + 14 * k);
     ctx.fillStyle = r.own ? 'rgba(31,91,216,0.92)' : 'rgba(255,255,255,0.10)';
-    slant(ctx, 40, y, W - 80 - scoreW - (hasResult ? 14 : 0), rowH, 22);
+    slant(ctx, 40, y, W - 80 - scoreW - (hasResult ? 14 : 0), rowH, 22 * k);
     ctx.fill();
-    logo(ctx, r.logo, 40 + 22 + 62, y + rowH / 2, 92, r.name || '');
+    logo(ctx, r.logo, 40 + (22 + 62) * k, y + rowH / 2, 92 * k, r.name || '');
     ctx.fillStyle = C.white;
     ctx.textAlign = 'left';
     ctx.textBaseline = 'middle';
-    const maxW = W - 80 - scoreW - 200;
-    fit(ctx, (r.name || '').toUpperCase(), maxW, 62, 800, true, 30);
-    ctx.fillText((r.name || '').toUpperCase(), 40 + 150, y + rowH / 2 + 3);
+    const maxW = W - 80 - scoreW - 200 * k;
+    fit(ctx, (r.name || '').toUpperCase(), maxW, 62 * k, 800, true, 24);
+    ctx.fillText((r.name || '').toUpperCase(), 40 + 150 * k, y + rowH / 2 + 3 * k);
     if (hasResult) {
       const x = W - 40 - scoreW;
       ctx.fillStyle = r.own ? C.white : 'rgba(255,255,255,0.18)';
-      slant(ctx, x, y, scoreW, rowH, 22);
+      slant(ctx, x, y, scoreW, rowH, 22 * k);
       ctx.fill();
       ctx.fillStyle = r.own ? C.navy : C.white;
       ctx.textAlign = 'center';
-      ctx.font = font(96, 800, true);
-      ctx.fillText(r.score, x + scoreW / 2, y + rowH / 2 + 5);
+      ctx.font = font(96 * k, 800, true);
+      ctx.fillText(r.score, x + scoreW / 2, y + rowH / 2 + 5 * k);
     }
   });
 
@@ -289,18 +292,19 @@ export function drawMatchday(ctx, s, a) {
 
   // Im Quadrat ist weniger Platz: Überschrift kleiner, Liste rückt nach oben
   const compact = H - T - B < 1200;
-  const titleY = T + (compact ? 300 : 360);
+  const tiny = H - T - B < 1000;
+  const titleY = T + (tiny ? 262 : compact ? 300 : 360);
   ctx.textAlign = 'left';
   ctx.textBaseline = 'alphabetic';
   ctx.fillStyle = C.white;
-  fit(ctx, (s.title || '').toUpperCase(), W - 112, compact ? 120 : 168, 800, true);
+  fit(ctx, (s.title || '').toUpperCase(), W - 112, tiny ? 92 : compact ? 120 : 168, 800, true);
   ctx.fillText((s.title || '').toUpperCase(), 50, titleY);
   ctx.fillStyle = C.sky;
-  ctx.font = font(compact ? 38 : 46, 700, true);
-  spaced(ctx, (s.subtitle || '').toUpperCase(), 56, titleY + (compact ? 52 : 62), 3);
+  ctx.font = font(tiny ? 30 : compact ? 38 : 46, 700, true);
+  spaced(ctx, (s.subtitle || '').toUpperCase(), 56, titleY + (tiny ? 42 : compact ? 52 : 62), 3);
 
   const rows = s.rows || [];
-  const listTop = titleY + (compact ? 92 : 110);
+  const listTop = titleY + (tiny ? 66 : compact ? 92 : 110);
   const bottom = H - B - 130;
   const gap = compact ? 8 : 12;
   const rowH = rows.length ? Math.min(118, (bottom - listTop - gap * (rows.length - 1)) / rows.length) : 0;

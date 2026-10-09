@@ -1,6 +1,6 @@
 # Insta-Studio – JFG Rothsee Süd
 
-Vorlagen für Instagram in allen gängigen Formaten: Beitrag 4:5 (1080 × 1350), Beitrag 3:4 (1080 × 1440), Quadrat 1:1 und Story 9:16. Die Spieldaten kommen automatisch vom BFV.
+Vorlagen für Instagram in allen gängigen Formaten: Beitrag 4:5 (1080 × 1350), Beitrag 3:4 (1080 × 1440), Querformat 4:3 (1080 × 810), Quadrat 1:1 und Story 9:16. Beim Laden eines Fotos wird das passende Format automatisch gewählt. Die Spieldaten kommen automatisch vom BFV.
 
 - **Deckblatt**: Spielfoto + Paarung + Ergebnis. Erstes Bild für einen Spielbericht oder eine Vorschau.
 - **Spieltag**: alle Spiele der Jugenden einer Woche, als **Vorschau** (Uhrzeiten) oder als **Ergebnisse** (grün/gelb/rot).
