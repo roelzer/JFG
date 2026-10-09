@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-09T06:57:32.154Z",
+ "updated": "2026-10-09T11:59:05.268Z",
  "club": {
   "name": "JFG Rothsee Süd",
   "instagram": "@rothseekicker",
@@ -54,7 +54,7 @@
    "isHome": true,
    "opponent": "SG QUELLE Fürth U15",
    "result": "0:7",
-   "competition": "FS/CJ/B-FS/B-MF/1",
+   "competition": "Freundschaftsspiel",
    "competitionType": "Freundschaftsspiele"
   },
   {
@@ -70,7 +70,7 @@
    "isHome": false,
    "opponent": "(SG) TV 21 Büchenbach",
    "result": "1:4",
-   "competition": "FS/CJ/K-FS/NM/J/1",
+   "competition": "Freundschaftsspiel",
    "competitionType": "Freundschaftsspiele"
   },
   {
@@ -86,7 +86,7 @@
    "isHome": true,
    "opponent": "JFG Wendelstein U12 (BFV-FöL)",
    "result": "4:2",
-   "competition": "FS/DJ/B-FS/B-MF/1",
+   "competition": "Freundschaftsspiel",
    "competitionType": "Freundschaftsspiele"
   },
   {
@@ -102,7 +102,7 @@
    "isHome": true,
    "opponent": "DJK Ingolstadt U16",
    "result": "2:2",
-   "competition": "FS/BJ/B-FS/B-MF/1",
+   "competition": "Freundschaftsspiel",
    "competitionType": "Freundschaftsspiele"
   },
   {
@@ -118,7 +118,7 @@
    "isHome": true,
    "opponent": "TSV Neudrossenfeld",
    "result": "",
-   "competition": "FS/AJ/K-FS/NM/J/1",
+   "competition": "Freundschaftsspiel",
    "competitionType": "Freundschaftsspiele"
   },
   {
@@ -134,7 +134,7 @@
    "isHome": false,
    "opponent": "JFG Schwarze Laber",
    "result": "2:2",
-   "competition": "FS/DJ/K-FS/R/1",
+   "competition": "Freundschaftsspiel",
    "competitionType": "Freundschaftsspiele"
   },
   {
@@ -150,7 +150,7 @@
    "isHome": true,
    "opponent": "TSG 08 Roth",
    "result": "10:0",
-   "competition": "FS/CJ/B-FS/B-MF/1",
+   "competition": "Freundschaftsspiel",
    "competitionType": "Freundschaftsspiele"
   },
   {
@@ -166,7 +166,7 @@
    "isHome": true,
    "opponent": "SpVgg Mögeldorf",
    "result": "2:4",
-   "competition": "FS/DJ/B-FS/B-MF/1",
+   "competition": "Freundschaftsspiel",
    "competitionType": "Freundschaftsspiele"
   },
   {
@@ -182,7 +182,7 @@
    "isHome": false,
    "opponent": "TSV Katzwang",
    "result": "1:2",
-   "competition": "FS/BJ/K-FS/NM/J/1",
+   "competition": "Freundschaftsspiel",
    "competitionType": "Freundschaftsspiele"
   },
   {
@@ -214,7 +214,7 @@
    "isHome": false,
    "opponent": "ASV Neumarkt 2",
    "result": "3:3",
-   "competition": "FS/CJ/L-FS/BAY/1",
+   "competition": "Freundschaftsspiel",
    "competitionType": "Freundschaftsspiele"
   },
   {
