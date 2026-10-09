@@ -1,0 +1,25 @@
+name: Diagnose Vereinsspiele (temporär)
+on:
+  push:
+    paths: ['.github/workflows/diag.yml']
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          C=016G94T91K000000VV0AG80NVUNAS2C2
+          A=https://widget-prod.bfv.de/api/service/widget/v1
+          for p in "club/$C/matches" "club/$C/info" "club/$C/teams" "club/$C/nextmatches" "club/$C/lastmatches"; do
+            echo "=== $A/$p"; curl -sS -m 20 "$A/$p" | head -c 1500; echo
+          done
+          echo "=== Vereinsseite: Links"
+          curl -sS -m 20 -A "Mozilla/5.0" "https://www.bfv.de/vereine/jfg-rothsee-sued/$C" -o club.html
+          grep -oE 'href="[^"]*(spiel|match|partial)[^"]*"' club.html | sort -u | head -40
+          grep -oE 'data-[a-z-]*(url|src|href)="[^"]*"' club.html | sort -u | head -40
+          grep -oE '"/partial/[^"]*"|/partial/[^"'"'"' ]*' club.html | sort -u | head -40
+          echo "=== Spiele-Unterseite"
+          for u in "https://www.bfv.de/vereine/jfg-rothsee-sued/$C/spiele" "https://www.bfv.de/vereine/jfg-rothsee-sued/$C/spielplan"; do
+            echo "--- $u"; curl -sS -m 20 -A "Mozilla/5.0" -o sp.html -w "%{http_code}\n" "$u"
+            grep -oE 'href="/spiele/[^"]*"' sp.html | sort -u | head -60
+            grep -oE '/partial/[^"'"'"' ]*' sp.html | sort -u | head -20
+          done
