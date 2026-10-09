@@ -60,6 +60,28 @@ for (const id of teamIds) {
   }
 }
 
+// Alte Mannschaften (frühere Spielzeiten, die der BFV noch führt) aussortieren:
+// behalten wird nur, wer in den letzten 60 Tagen gespielt hat oder noch Spiele vor sich hat.
+const cutoff = new Date(Date.now() - 60 * 864e5).toISOString().slice(0, 10);
+const active = new Set(
+  [...matches.values()].filter((m) => m.date >= cutoff).map((m) => m.teamId),
+);
+for (const t of [...teams]) {
+  if (active.has(t.id)) continue;
+  console.log(`– ${t.label} ${t.name} ausgeblendet (keine aktuellen Spiele: ${t.competition})`);
+  teams.splice(teams.indexOf(t), 1);
+  for (const [k, m] of matches) if (m.teamId === t.id) matches.delete(k);
+}
+// Gibt es pro Altersklasse nur noch eine Mannschaft, braucht das Kürzel kein "II"/"III"
+for (const t of teams) {
+  if (config.teams.find((c) => c.id === t.id)?.label) continue;
+  const base = t.label.split(' ')[0];
+  if (teams.filter((x) => x.label.split(' ')[0] === base).length === 1 && base !== t.label) {
+    t.label = base;
+    for (const m of matches.values()) if (m.teamId === t.id) m.label = base;
+  }
+}
+
 if (!teams.length) {
   console.error('Keine Mannschaft geladen – data/spiele.json bleibt unverändert.');
   process.exit(1);

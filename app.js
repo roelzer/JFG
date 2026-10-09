@@ -82,6 +82,43 @@ async function refreshLive() {
   }
 }
 
+/* ---------- Eigene Korrekturen ----------
+   Änderungen an BFV-Spielen und selbst angelegte Spiele werden im Browser gespeichert
+   und beim nächsten BFV-Abruf wieder darübergelegt. */
+const OWN = 'JFG Rothsee Süd';
+const readJson = (k, d) => { try { return JSON.parse(store.get(k, '')) ?? d; } catch { return d; } };
+const edits = readJson('overrides', {});
+const manual = readJson('manual', []);
+const saveEdits = () => { store.set('overrides', JSON.stringify(edits)); store.set('manual', JSON.stringify(manual)); };
+const keyOf = (m) => m.key || m.id + '|' + m.teamId;
+
+function withSides(m) {
+  // Heim/Gast aus Gegner + Heimspiel ableiten, falls etwas geändert wurde
+  return { ...m, home: m.isHome ? OWN : m.opponent, guest: m.isHome ? m.opponent : OWN };
+}
+
+function allMatches() {
+  const list = (state.data.matches || []).map((m) => {
+    const key = keyOf(m);
+    const o = edits[key];
+    return o ? withSides({ ...m, ...o, key, edited: true }) : { ...m, key };
+  });
+  manual.forEach((m) => list.push(withSides({ ...m, manual: true })));
+  return list
+    .filter((m) => !/spielfrei/i.test(m.opponent))
+    .sort((a, b) => (a.date + a.time).localeCompare(b.date + b.time));
+}
+
+function editMatch(m, field, value) {
+  if (m.manual) {
+    const t = manual.find((x) => x.key === m.key);
+    if (t) t[field] = value;
+  } else {
+    edits[m.key] = { ...(edits[m.key] || {}), [field]: value };
+  }
+  saveEdits();
+}
+
 /* ---------- Deckblatt ---------- */
 const coverFields = ['kicker', 'label', 'result', 'home', 'guest', 'date', 'time', 'competition'];
 
@@ -92,28 +129,27 @@ function matchText(m) {
 
 function fillMatchSelect() {
   const sel = $('matchSelect');
-  const ms = state.data.matches || [];
+  const ms = allMatches().filter((m) => !m.hidden);
   sel.innerHTML = '';
   sel.append(new Option('– von Hand ausfüllen –', ''));
-  const real = ms.filter((m) => !/spielfrei/i.test(m.opponent));
-  const past = real.filter((m) => m.date < todayIso || m.result).reverse();
-  const next = real.filter((m) => m.date >= todayIso && !m.result);
+  const past = ms.filter((m) => m.date < todayIso || m.result).reverse();
+  const next = ms.filter((m) => m.date >= todayIso && !m.result);
   for (const [title, list] of [['Gespielt', past], ['Demnächst', next]]) {
     if (!list.length) continue;
     const g = document.createElement('optgroup');
     g.label = title;
-    list.slice(0, 40).forEach((m) => g.append(new Option(matchText(m), m.id + '|' + m.teamId)));
+    list.slice(0, 40).forEach((m) => g.append(new Option(matchText(m) + (m.edited || m.manual ? ' ✎' : ''), m.key)));
     sel.append(g);
   }
   // Standard: das zuletzt gespielte Spiel
-  if (!state.cover.matchId && past[0]) state.cover.matchId = past[0].id + '|' + past[0].teamId;
+  if (!state.cover.matchId && past[0]) state.cover.matchId = past[0].key;
   sel.value = state.cover.matchId;
   if (state.cover.matchId) applyMatch(state.cover.matchId);
 }
 
 function applyMatch(key) {
   state.cover.matchId = key;
-  const m = (state.data.matches || []).find((x) => x.id + '|' + x.teamId === key);
+  const m = allMatches().find((x) => x.key === key);
   if (!m) return;
   $('label').value = m.label || '';
   $('home').value = m.home;
@@ -129,29 +165,20 @@ function applyMatch(key) {
 }
 
 /* ---------- Spieltag ---------- */
-function weekMatches() {
+function weekMatches({ withHidden = false } = {}) {
   const from = iso(state.md.weekStart);
   const to = iso(addDays(state.md.weekStart, 6));
-  return (state.data.matches || []).filter((m) => m.date >= from && m.date <= to && !/spielfrei/i.test(m.opponent));
+  return allMatches().filter((m) => m.date >= from && m.date <= to && (withHidden || !m.hidden));
 }
 
 function buildRows() {
-  state.md.rows = weekMatches().map((m) => ({
-    label: m.label || '',
-    opponent: m.opponent,
-    isHome: m.isHome,
-    date: m.date,
-    time: m.time,
-    result: m.result,
-    clubId: m.isHome ? m.guestClubId : m.homeClubId,
-  }));
   if (!state.md.subtitleDirty) $('mdSubtitle').value = autoSubtitle();
   renderRowEditor();
   draw();
 }
 
 function autoSubtitle() {
-  const dates = state.md.rows.map((r) => r.date).filter(Boolean).sort();
+  const dates = weekMatches().map((r) => r.date).filter(Boolean).sort();
   const a = dates[0] || iso(addDays(state.md.weekStart, 5));
   const b = dates[dates.length - 1] || iso(addDays(state.md.weekStart, 6));
   if (a === b) return fmt(a, { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
@@ -170,26 +197,65 @@ function renderRowEditor() {
   $('weekLabel').textContent = weekLabel();
   const ol = $('rows');
   ol.innerHTML = '';
-  state.md.rows.forEach((r, i) => {
+  const refresh = () => { fillMatchSelect(); draw(); };
+  weekMatches().forEach((m) => {
     const li = document.createElement('li');
+    li.dataset.key = m.key;
+    li.classList.toggle('edited', !!m.edited);
     const input = (key, attrs = {}) => {
-      const el = Object.assign(document.createElement('input'), { value: r[key] ?? '', ...attrs });
-      el.addEventListener('input', () => { r[key] = el.value; draw(); });
+      const el = Object.assign(document.createElement('input'), { value: m[key] ?? '', ...attrs });
+      el.addEventListener('input', () => { editMatch(m, key, el.value); li.classList.add('edited'); refresh(); });
       return el;
     };
     const ha = document.createElement('select');
     ha.append(new Option('Heim', '1'), new Option('Auswärts', '0'));
-    ha.value = r.isHome ? '1' : '0';
-    ha.addEventListener('change', () => { r.isHome = ha.value === '1'; draw(); });
-    const x = Object.assign(document.createElement('button'), { className: 'ghost x', textContent: '✕', title: 'Entfernen' });
-    x.setAttribute('aria-label', 'Spiel entfernen');
-    x.addEventListener('click', () => { state.md.rows.splice(i, 1); renderRowEditor(); draw(); });
+    ha.value = m.isHome ? '1' : '0';
+    ha.ariaLabel = 'Heim oder Auswärts';
+    ha.addEventListener('change', () => { editMatch(m, 'isHome', ha.value === '1'); li.classList.add('edited'); refresh(); });
+
+    const cancel = Object.assign(document.createElement('input'), { type: 'checkbox', checked: !!m.cancelled });
+    cancel.addEventListener('change', () => { editMatch(m, 'cancelled', cancel.checked); li.classList.add('edited'); refresh(); });
+    const cancelLabel = document.createElement('label');
+    cancelLabel.className = 'check small';
+    cancelLabel.append(cancel, ' Abgesagt');
+
+    const tools = document.createElement('div');
+    tools.className = 'tools';
+    if (m.edited) {
+      const reset = Object.assign(document.createElement('button'), { className: 'ghost x', textContent: '↺', title: 'BFV-Daten wiederherstellen' });
+      reset.ariaLabel = 'Änderungen verwerfen, BFV-Daten verwenden';
+      reset.addEventListener('click', () => { delete edits[m.key]; saveEdits(); fillMatchSelect(); buildRows(); });
+      tools.append(reset);
+    }
+    const x = Object.assign(document.createElement('button'), { className: 'ghost x', textContent: '✕', title: 'Ausblenden' });
+    x.ariaLabel = 'Spiel ausblenden';
+    x.addEventListener('click', () => {
+      if (m.manual) manual.splice(manual.findIndex((t) => t.key === m.key), 1);
+      else edits[m.key] = { ...(edits[m.key] || {}), hidden: true };
+      saveEdits();
+      fillMatchSelect();
+      buildRows();
+    });
+    tools.append(x);
+
     const meta = document.createElement('div');
     meta.className = 'meta';
     meta.append(ha, input('date', { type: 'date', ariaLabel: 'Datum' }), input('time', { type: 'time', ariaLabel: 'Uhrzeit' }), input('result', { placeholder: '3:1', ariaLabel: 'Ergebnis (Heim:Gast)' }));
-    li.append(input('label', { placeholder: 'U15', ariaLabel: 'Altersklasse' }), input('opponent', { placeholder: 'Gegner', ariaLabel: 'Gegner' }), x, meta);
+    const foot = document.createElement('div');
+    foot.className = 'foot';
+    const tag = document.createElement('span');
+    tag.className = 'tag';
+    tag.textContent = m.manual ? 'selbst angelegt' : 'geändert – bleibt gespeichert';
+    foot.append(cancelLabel, tag);
+    li.append(input('label', { placeholder: 'U15', ariaLabel: 'Altersklasse' }), input('opponent', { placeholder: 'Gegner', ariaLabel: 'Gegner' }), tools, meta, foot);
+    li.classList.toggle('manual', !!m.manual);
     ol.append(li);
   });
+
+  const hidden = weekMatches({ withHidden: true }).filter((m) => m.hidden);
+  const restore = $('restoreRows');
+  restore.hidden = !hidden.length;
+  restore.textContent = `${hidden.length} ausgeblendete${hidden.length === 1 ? 's Spiel' : ' Spiele'} wieder anzeigen`;
 }
 
 /* ---------- Zeichnen ---------- */
@@ -217,9 +283,9 @@ function draw() {
       });
     } else {
       const results = state.md.mode === 'ergebnisse';
-      const rows = await Promise.all(state.md.rows.map(async (r) => ({
+      const rows = await Promise.all(weekMatches().map(async (r) => ({
         ...r,
-        logo: await loadImg(logoSrc(r.clubId)),
+        logo: await loadImg(logoSrc(r.isHome ? r.guestClubId : r.homeClubId)),
         day: r.date ? fmt(r.date, { weekday: 'short', day: '2-digit', month: '2-digit' }).replace(',', '').toUpperCase() : '',
         result: (r.result || '').replace(/[-–]/, ':'),
         outcome: outcome({ result: (r.result || '').replace(/[-–]/, ':'), isHome: r.isHome }),
@@ -340,9 +406,23 @@ document.querySelectorAll('input[name=mode]').forEach((r) => r.addEventListener(
   draw();
 }));
 $('addRow').addEventListener('click', () => {
-  state.md.rows.push({ label: '', opponent: '', isHome: true, date: iso(addDays(state.md.weekStart, 5)), time: '', result: '' });
-  renderRowEditor();
-  draw();
+  const key = 'manual-' + Date.now();
+  manual.push({ key, label: '', opponent: '', isHome: true, date: iso(addDays(state.md.weekStart, 5)), time: '', result: '', competition: '' });
+  saveEdits();
+  buildRows();
+  // Neue Zeile direkt zum Ausfüllen anspringen
+  const li = document.querySelector(`#rows li[data-key="${key}"]`);
+  li?.scrollIntoView({ block: 'center', behavior: 'smooth' });
+  li?.querySelector('input')?.focus();
+});
+$('restoreRows').addEventListener('click', () => {
+  weekMatches({ withHidden: true }).filter((m) => m.hidden).forEach((m) => {
+    delete edits[m.key].hidden;
+    if (!Object.keys(edits[m.key]).length) delete edits[m.key];
+  });
+  saveEdits();
+  fillMatchSelect();
+  buildRows();
 });
 
 $('logoInput').addEventListener('change', async (e) => {
@@ -381,7 +461,7 @@ canvas.height = R.H;
     || (await loadImg('assets/logo.png'));
   fillMatchSelect();
   // Spieltag: Woche mit dem nächsten anstehenden Spiel, sonst aktuelle Woche
-  const next = (state.data.matches || []).find((m) => m.date >= todayIso);
+  const next = allMatches().find((m) => m.date >= todayIso);
   if (next) state.md.weekStart = mondayOf(new Date(next.date + 'T12:00:00'));
   buildRows();
   draw();

@@ -135,7 +135,13 @@ input, select {
   padding: 10px; border: 1px solid var(--line); border-radius: 10px; background: var(--field);
 }
 .rows li input { padding: 8px; font-size: 15px; background: var(--panel); }
-.rows li .meta { grid-column: 1 / -1; display: grid; grid-template-columns: 1.2fr 1fr 1fr 1fr; gap: 6px; }
+.rows li .meta { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
 .rows li select { padding: 8px; font-size: 15px; background: var(--panel); }
 .rows li .x { padding: 6px 10px; }
+.rows li .tools { display: flex; gap: 4px; }
+.rows li .foot { grid-column: 1 / -1; display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.rows li .tag { display: none; font-size: 12px; font-weight: 600; color: var(--accent); }
+.rows li.edited, .rows li.manual { border-color: var(--accent); }
+.rows li.edited .tag, .rows li.manual .tag { display: inline; }
+.check.small { font-size: 14px; }
 .note { margin: 0; font-size: 13px; color: var(--muted); }

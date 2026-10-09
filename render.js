@@ -341,7 +341,15 @@ export function drawMatchday(ctx, s, a) {
 
     // Rechts: Termin oder Ergebnis
     const rx = W - 40 - rightW;
-    if (results && r.result) {
+    if (r.cancelled) {
+      ctx.fillStyle = 'rgba(255,255,255,0.22)';
+      slant(ctx, rx, y, rightW, rowH, 18);
+      ctx.fill();
+      ctx.fillStyle = C.white;
+      ctx.textAlign = 'center';
+      fit(ctx, 'ABGESAGT', rightW - 44, Math.min(44, rowH * 0.4), 800, true);
+      ctx.fillText('ABGESAGT', rx + rightW / 2, y + rowH / 2 + 3);
+    } else if (results && r.result) {
       const o = r.outcome;
       ctx.fillStyle = o === 'S' ? C.win : o === 'N' ? C.loss : o === 'U' ? C.draw : C.white;
       slant(ctx, rx, y, rightW, rowH, 18);

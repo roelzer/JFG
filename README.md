@@ -12,6 +12,13 @@ Vorlagen für Instagram in allen gängigen Formaten: Beitrag 4:5 (1080 × 1350),
 3. Spiel aus der BFV-Liste auswählen. Die Felder füllen sich von selbst und lassen sich trotzdem ändern.
 4. **Teilen** öffnet am Handy direkt das Teilen-Menü (Instagram). **Herunterladen** speichert das PNG.
 
+### Spiel verlegt, abgesagt oder falsch?
+
+Im Reiter **Spieltag** lässt sich jede Zeile ändern: Uhrzeit, Datum, Gegner, Ergebnis, „Abgesagt“.
+Die Änderung bleibt auf diesem Gerät gespeichert, auch wenn die BFV-Daten neu geladen werden,
+und gilt auch fürs Deckblatt. ✕ blendet ein Spiel aus, ↺ holt die BFV-Daten zurück,
+„+ Spiel hinzufügen“ legt ein eigenes Spiel an (z. B. Testspiel oder Turnier).
+
 Tipp: Am Handy im Browser „Zum Startbildschirm hinzufügen“, dann verhält sich die Seite wie eine App.
 
 ## Woher kommen die Daten?
@@ -22,6 +29,8 @@ und schreibt sie nach `data/spiele.json`. Vereinslogos landen in `logos/`.
 Von Hand anstoßen: *Actions → BFV-Daten aktualisieren → Run workflow*.
 
 ### Mannschaft hinzufügen oder umbenennen
+
+Mannschaften ohne aktuelle Spiele (alte Spielzeiten, die der BFV noch führt) werden automatisch ausgeblendet.
 
 Die Mannschafts-ID steht in der BFV-Adresse:
 `bfv.de/mannschaften/jfg-rothsee-sued/`**`0182T5L5T8000000VV0AG80NVTL7UGGC`**
