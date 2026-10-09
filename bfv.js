@@ -82,11 +82,18 @@ export function normalizeTeamMatches(json, teamId, override = {}) {
       isHome,
       opponent: isHome ? guest : home,
       result: cleanResult(m.result),
-      competition: m.competitionName || team.competition,
+      competition: competitionName(m.competitionName || team.competition),
       competitionType: m.competitionType || '',
     };
   });
   return { team, matches };
+}
+
+// BFV liefert bei Freundschaftsspielen nur Kürzel wie "FS/CJ/B-FS/B-MF/1"
+export function competitionName(name) {
+  if (!name) return '';
+  if (/^FS\//.test(name)) return 'Freundschaftsspiel';
+  return name;
 }
 
 // Aus Sicht der JFG: "S" Sieg, "N" Niederlage, "U" Unentschieden
