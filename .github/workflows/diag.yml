@@ -6,18 +6,19 @@ jobs:
   probe:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
       - run: |
           C=016G94T91K000000VV0AG80NVUNAS2C2
-          for p in naechste letzte; do
-            echo "=================== $p"
-            curl -sS -m 20 -A "Mozilla/5.0" "https://www.bfv.de/partial/vereinsprofil/spielplan/$C/$p" -o $p.html
-            wc -c $p.html
-            # Text ohne Tags, kompakt
-            sed -e 's/<[^>]*>/ /g' $p.html | tr -s ' \n\t' ' ' | fold -w 220 | head -60
-            echo; echo "--- Links"
-            grep -oE 'href="[^"]*"' $p.html | sort -u | head -40
-            echo "--- erste 2500 Zeichen Roh-HTML"
-            head -c 2500 $p.html; echo
+          B="https://www.bfv.de/partial/vereinsprofil/spielplan/$C"
+          for q in "naechste?wettbewerbsart=8" "naechste?wettbewerbsart=8&from=0&size=50" "naechste?wettbewerbsart=1&from=0&size=50" "naechste?wettbewerbsart=7&from=0&size=50" "letzte?wettbewerbsart=8&from=0&size=50"; do
+            curl -sS -m 20 -A "Mozilla/5.0" "$B/$q" -o p.html
+            ids=$(grep -oE 'ergebnisse/spiel/-/[0-9A-Z]{32}' p.html | sed 's|.*/||' | sort -u)
+            echo "=== $q : $(echo "$ids" | grep -c .) Spiele"
+            for id in $ids; do
+              if grep -q "$id" data/spiele.json; then s="schon drin"; else s="FEHLT"; fi
+              echo "  $id $s"
+            done
+            # Datum + Teams + Wettbewerb grob als Text
+            sed -e 's/<[^>]*>/ /g' p.html | tr -s ' \n\t' ' ' | grep -oE '(Mo|Di|Mi|Do|Fr|Sa|So)\.\. [0-9.]{10} /[0-9:]{5} Uhr' | head -50 | tr '\n' ';'; echo
+            grep -oE 'data-img-alt="[^"]*"' p.html | sed 's/data-img-alt=//' | tr '\n' ' ' | head -c 3000; echo
           done
-          echo "=================== Mannschaftsliste"
-          curl -sS -m 20 -A "Mozilla/5.0" "https://www.bfv.de/partial/vereinsprofil/mannschaftsliste/$C" | grep -oE 'href="/mannschaften/[^"]*"' | sort -u
