@@ -17,6 +17,13 @@ export function ageLabel(...texts) {
   return '';
 }
 
+// "U13" + "JFG Rothsee Süd II" -> "U13 II" (damit mehrere Mannschaften einer Altersklasse unterscheidbar sind)
+function withSuffix(label, name) {
+  if (!label) return '';
+  const m = String(name || '').match(/\s(II|III|IV|2|3|4)\b/);
+  return m ? `${label} ${m[1]}` : label;
+}
+
 // "05.10.2026" oder "2026-10-05" -> "2026-10-05"
 export function isoDate(d) {
   if (!d) return '';
@@ -55,7 +62,7 @@ export function normalizeTeamMatches(json, teamId, override = {}) {
     name: t.name || override.name || 'JFG Rothsee Süd',
     typeName: t.typeName || '',
     competition: t.competitionName || '',
-    label: override.label || ageLabel(t.typeName, t.competitionName, t.name) || '',
+    label: override.label || withSuffix(ageLabel(t.typeName, t.competitionName, t.name), t.name),
     clubId: t.clubId || '',
   };
   const matches = (data.matches ?? []).map((m) => {

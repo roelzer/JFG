@@ -28,6 +28,19 @@ async function discoverTeams() {
   } catch (e) {
     console.warn('Vereins-Info nicht abrufbar:', e.message);
   }
+  // Vereinsseite auf bfv.de: dort sind alle aktuellen Mannschaften verlinkt
+  try {
+    const res = await fetch(`https://www.bfv.de/vereine/jfg-rothsee-sued/${config.club.bfvClubId}`, {
+      headers: { 'user-agent': 'Mozilla/5.0 (JFG Rothsee Süd Insta-Studio)' },
+    });
+    const html = await res.text();
+    for (const m of html.matchAll(/\/mannschaften\/[^/"']+\/([0-9A-Z]{32})/g)) found.push(m[1]);
+    const imgs = [...new Set([...html.matchAll(/(?:src|data-src|srcset)="([^"]*(?:logo|Logo|media)[^"]*)"/g)].map((m) => m[1]))];
+    console.log('Bild-Adressen auf der Vereinsseite:', imgs.slice(0, 12));
+  } catch (e) {
+    console.warn('Vereinsseite nicht abrufbar:', e.message);
+  }
+  console.log('Gefundene Mannschafts-IDs:', [...new Set(found)]);
   return found;
 }
 
