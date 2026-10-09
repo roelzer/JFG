@@ -7,7 +7,7 @@ Vorlagen für Instagram-Posts (1080 × 1350). Die Spieldaten kommen automatisch 
 
 ## Benutzen
 
-1. Seite öffnen: `https://roelzer.github.io/jfg/`
+1. Seite öffnen: `https://roelzer.github.io/JFG/`
 2. Vorlage wählen, Foto auswählen und mit dem Finger zurechtschieben
 3. Spiel aus der BFV-Liste auswählen. Die Felder füllen sich von selbst und lassen sich trotzdem ändern.
 4. **Teilen** öffnet am Handy direkt das Teilen-Menü (Instagram). **Herunterladen** speichert das PNG.
