@@ -344,6 +344,7 @@ $('photoInput').addEventListener('change', async (e) => {
   if (!f) return;
   state.photo = await readImage(f);
   state.pan = { x: 0, y: 0, zoom: 1 };
+  matchFormatToPhoto(state.photo);
   $('zoom').value = 1;
   $('zoomRow').hidden = false;
   $('panHint').hidden = false;
@@ -436,6 +437,22 @@ $('logoInput').addEventListener('change', async (e) => {
 $('refreshBtn').addEventListener('click', refreshLive);
 
 /* ---------- Format ---------- */
+// Deckblatt: Format automatisch ans Foto anpassen (z. B. iPhone-Hochformat = 3:4), damit nichts abgeschnitten wird
+function matchFormatToPhoto(img) {
+  if (state.tab !== 'cover' || !img) return;
+  const ratio = img.width / img.height;
+  let best = null;
+  for (const [key, f] of Object.entries(FORMATS)) {
+    const diff = Math.abs(W / f.h - ratio);
+    if (diff < 0.03 && (!best || diff < best.diff)) best = { key, diff };
+  }
+  if (best && best.key !== $('format').value) {
+    $('format').value = best.key;
+    applyFormat(best.key);
+    setStatus(`Format auf ${FORMATS[best.key].name} umgestellt – passend zum Foto.`);
+  }
+}
+
 function applyFormat(key) {
   setFormat(key);
   canvas.width = W;
