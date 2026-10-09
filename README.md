@@ -10,7 +10,7 @@ Vorlagen für Instagram in allen gängigen Formaten: Beitrag 4:5 (1080 × 1350),
 1. Seite öffnen: `https://roelzer.github.io/JFG/`
 2. Vorlage wählen, Foto auswählen und mit dem Finger zurechtschieben
 3. Spiel aus der BFV-Liste auswählen. Die Felder füllen sich von selbst und lassen sich trotzdem ändern.
-4. **Teilen** öffnet am Handy direkt das Teilen-Menü (Instagram). **Herunterladen** speichert das PNG.
+4. **In Fotos speichern** legt das Bild direkt in die Galerie (iPhone: im Menü „Bild sichern“ tippen). **Teilen** öffnet das Teilen-Menü, z. B. für Instagram.
 
 ### Spiel verlegt, abgesagt oder falsch?
 

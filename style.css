@@ -74,6 +74,14 @@ canvas:active { cursor: grabbing; }
 }
 .hint[hidden] { display: block; opacity: 0; }
 
+.save-overlay {
+  position: fixed; inset: 0; z-index: 20; background: rgba(5,10,25,.98);
+  display: grid; place-items: center; align-content: center; gap: 14px; padding: 20px; text-align: center; color: #fff;
+}
+.save-overlay[hidden] { display: none; }
+.save-overlay img { max-width: 100%; max-height: 70vh; border-radius: 12px; -webkit-touch-callout: default; }
+.save-overlay p { margin: 0; }
+.save-overlay button { min-width: 160px; }
 .actions { display: flex; gap: 10px; margin-top: 12px; }
 .actions button { flex: 1; }
 .status { min-height: 1.4em; margin: 8px 2px 0; font-size: 14px; color: var(--muted); }

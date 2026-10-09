@@ -299,6 +299,7 @@ function draw() {
         footer: results ? 'ERGEBNISSE AUS SICHT DER JFG' : 'KOMMT VORBEI UND FEUERT UNS AN!',
       }, assets);
     }
+    prepareFile();
   });
 }
 
@@ -309,22 +310,66 @@ function fileName() {
     : `${iso(state.md.weekStart)}_spieltag_${state.md.mode}`;
   return base.replace(/[^\w.-]+/g, '-') + '.png';
 }
-const toBlob = () => new Promise((res) => canvas.toBlob(res, 'image/png'));
+const toBlob = () => new Promise((res) => canvas.toBlob(res, 'image/jpeg', 0.92));
 
-$('downloadBtn').addEventListener('click', async () => {
+// Fertiges Bild vorhalten: Safari erlaubt das Teilen-Menü nur direkt im Tipp, ohne Wartezeit davor
+let readyFile = null;
+let blobTimer;
+function prepareFile() {
+  clearTimeout(blobTimer);
+  readyFile = null;
+  blobTimer = setTimeout(async () => {
+    const blob = await toBlob();
+    if (blob) readyFile = new File([blob], fileName().replace(/\.png$/, '.jpg'), { type: 'image/jpeg' });
+  }, 300);
+}
+
+async function currentFile() {
+  if (readyFile) return readyFile;
   const blob = await toBlob();
-  const a = Object.assign(document.createElement('a'), { href: URL.createObjectURL(blob), download: fileName() });
+  return new File([blob], fileName().replace(/\.png$/, '.jpg'), { type: 'image/jpeg' });
+}
+
+function downloadFile(file) {
+  const a = Object.assign(document.createElement('a'), { href: URL.createObjectURL(file), download: file.name });
   a.click();
   setTimeout(() => URL.revokeObjectURL(a.href), 5000);
+}
+
+const isAppleMobile = /iPhone|iPad|iPod/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+
+// iPhone: Teilen-Menü öffnen, dort „Bild sichern“ → landet direkt in der Fotos-App.
+// Klappt das nicht, Bild groß anzeigen (lange drücken → „Zu Fotos hinzufügen“).
+// Android/PC: normaler Download (Android zeigt Downloads auch in der Galerie).
+$('saveBtn').addEventListener('click', async () => {
+  const file = readyFile || (await currentFile());
+  if (isAppleMobile) {
+    if (navigator.canShare?.({ files: [file] })) {
+      try {
+        await navigator.share({ files: [file] });
+        setStatus('Tipp: Im Menü „Bild sichern“ wählen – dann ist es in deinen Fotos.');
+        return;
+      } catch (err) {
+        if (err?.name === 'AbortError') return;
+      }
+    }
+    $('saveImage').src = URL.createObjectURL(file);
+    $('saveOverlay').hidden = false;
+    return;
+  }
+  downloadFile(file);
+});
+$('saveClose').addEventListener('click', () => {
+  $('saveOverlay').hidden = true;
+  URL.revokeObjectURL($('saveImage').src);
 });
 
 $('shareBtn').addEventListener('click', async () => {
-  const blob = await toBlob();
-  const file = new File([blob], fileName(), { type: 'image/png' });
+  const file = readyFile || (await currentFile());
   if (navigator.canShare?.({ files: [file] })) {
     try { await navigator.share({ files: [file] }); } catch {}
   } else {
-    $('downloadBtn').click();
+    downloadFile(file);
     setStatus('Teilen geht in diesem Browser nicht – Bild wurde heruntergeladen.');
   }
 });

@@ -32,8 +32,8 @@
         <p class="hint" id="panHint">Foto mit dem Finger verschieben</p>
       </div>
       <div class="actions">
-        <button class="primary" id="shareBtn">Teilen</button>
-        <button id="downloadBtn">Herunterladen</button>
+        <button class="primary" id="saveBtn">In Fotos speichern</button>
+        <button id="shareBtn">Teilen</button>
       </div>
       <p class="status" id="status"></p>
     </section>
@@ -125,6 +125,13 @@
       </details>
     </section>
   </main>
+
+  <!-- Fallback, wenn der Browser kein Teilen-Menü kann: Bild groß zeigen, lange drücken → zu Fotos -->
+  <div class="save-overlay" id="saveOverlay" hidden>
+    <img id="saveImage" alt="Fertiges Bild">
+    <p>Bild <strong>lange gedrückt halten</strong> → <strong>„Zu Fotos hinzufügen“</strong></p>
+    <button id="saveClose">Fertig</button>
+  </div>
 
   <script type="module" src="app.js"></script>
 </body>
