@@ -77,7 +77,15 @@ function stripes(ctx, alpha = 0.05) {
 
 function logo(ctx, img, cx, cy, size, fallbackText = '') {
   if (img) {
-    const s = Math.min(size / img.width, size / img.height);
+    // Weiße Kachel, damit Logos mit und ohne Hintergrund gleich aussehen
+    ctx.save();
+    ctx.fillStyle = C.white;
+    ctx.beginPath();
+    ctx.roundRect(cx - size / 2, cy - size / 2, size, size, size * 0.18);
+    ctx.fill();
+    ctx.restore();
+    const inner = size * 0.84;
+    const s = Math.min(inner / img.width, inner / img.height);
     ctx.drawImage(img, cx - (img.width * s) / 2, cy - (img.height * s) / 2, img.width * s, img.height * s);
     return;
   }

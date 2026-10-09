@@ -94,8 +94,9 @@ function fillMatchSelect() {
   const ms = state.data.matches || [];
   sel.innerHTML = '';
   sel.append(new Option('– von Hand ausfüllen –', ''));
-  const past = ms.filter((m) => m.date < todayIso || m.result).reverse();
-  const next = ms.filter((m) => m.date >= todayIso && !m.result);
+  const real = ms.filter((m) => !/spielfrei/i.test(m.opponent));
+  const past = real.filter((m) => m.date < todayIso || m.result).reverse();
+  const next = real.filter((m) => m.date >= todayIso && !m.result);
   for (const [title, list] of [['Gespielt', past], ['Demnächst', next]]) {
     if (!list.length) continue;
     const g = document.createElement('optgroup');
@@ -130,7 +131,7 @@ function applyMatch(key) {
 function weekMatches() {
   const from = iso(state.md.weekStart);
   const to = iso(addDays(state.md.weekStart, 6));
-  return (state.data.matches || []).filter((m) => m.date >= from && m.date <= to);
+  return (state.data.matches || []).filter((m) => m.date >= from && m.date <= to && !/spielfrei/i.test(m.opponent));
 }
 
 function buildRows() {
@@ -154,8 +155,8 @@ function autoSubtitle() {
   const b = dates[dates.length - 1] || iso(addDays(state.md.weekStart, 6));
   if (a === b) return fmt(a, { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
   const sameMonth = a.slice(0, 7) === b.slice(0, 7);
-  return `${fmt(a, sameMonth ? { day: 'numeric' } : { day: 'numeric', month: 'long' })}. – ${fmt(b, { day: 'numeric', month: 'long', year: 'numeric' })}`
-    .replace('.. ', '. ');
+  const from = sameMonth ? fmt(a, { day: 'numeric' }) + '.' : fmt(a, { day: 'numeric', month: 'long' });
+  return `${from} – ${fmt(b, { day: 'numeric', month: 'long', year: 'numeric' })}`.replace('.. ', '. ');
 }
 
 function weekLabel() {
