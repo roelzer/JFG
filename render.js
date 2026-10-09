@@ -1,6 +1,22 @@
-// Zeichnet die Instagram-Vorlagen (1080 × 1350, Hochformat 4:5) auf ein Canvas.
+// Zeichnet die Instagram-Vorlagen auf ein Canvas. Breite immer 1080 px, Höhe je nach Format.
 export const W = 1080;
-export const H = 1350;
+
+// T/B = Sicherheitsabstand oben/unten (Story: dort liegen Profilbild und Antwortleiste)
+export const FORMATS = {
+  '4:5': { h: 1350, t: 0, b: 0, name: 'Beitrag 4:5 (1080 × 1350)' },
+  '3:4': { h: 1440, t: 0, b: 0, name: 'Beitrag 3:4 (1080 × 1440)' },
+  '1:1': { h: 1080, t: 0, b: 0, name: 'Quadrat 1:1 (1080 × 1080)' },
+  '9:16': { h: 1920, t: 200, b: 250, name: 'Story 9:16 (1080 × 1920)' },
+};
+export let H = 1350;
+let T = 0;
+let B = 0;
+export function setFormat(key) {
+  const f = FORMATS[key] || FORMATS['4:5'];
+  H = f.h;
+  T = f.t;
+  B = f.b;
+}
 
 export const C = {
   navy: '#0a1a3a',
@@ -111,6 +127,8 @@ function logo(ctx, img, cx, cy, size, fallbackText = '') {
 }
 
 function header(ctx, s, a) {
+  ctx.save();
+  ctx.translate(0, T);
   logo(ctx, a.ownLogo, 112, 112, 116, 'JFG Rothsee Süd');
   ctx.fillStyle = C.white;
   ctx.textAlign = 'left';
@@ -120,13 +138,15 @@ function header(ctx, s, a) {
   ctx.font = font(28, 600);
   ctx.fillStyle = C.sky;
   spaced(ctx, (s.subline || 'JUGENDFUSSBALL').toUpperCase(), 192, 148, 3);
+  ctx.restore();
 }
 
 function footer(ctx, left, right) {
   ctx.save();
+  // Balken reicht bis zum unteren Rand, Text bleibt im sicheren Bereich
   ctx.fillStyle = C.blue;
-  slant(ctx, -30, H - 96, W + 60, 96, 0);
-  ctx.fill();
+  ctx.fillRect(0, H - 96 - B, W, 96 + B);
+  ctx.translate(0, -B);
   ctx.fillStyle = C.sky;
   ctx.fillRect(0, H - 100, W, 4);
   ctx.textBaseline = 'middle';
@@ -170,12 +190,13 @@ export function drawCover(ctx, s, a) {
   g.addColorStop(1, 'rgba(6,16,38,0)');
   ctx.fillStyle = g;
   ctx.fillRect(0, 0, W, 300);
-  g = ctx.createLinearGradient(0, 640, 0, H);
+  const fadeY = H - B - 710;
+  g = ctx.createLinearGradient(0, fadeY, 0, H);
   g.addColorStop(0, 'rgba(10,26,58,0)');
   g.addColorStop(0.45, 'rgba(10,26,58,0.88)');
   g.addColorStop(1, 'rgba(10,26,58,0.98)');
   ctx.fillStyle = g;
-  ctx.fillRect(0, 640, W, H - 640);
+  ctx.fillRect(0, fadeY, W, H - fadeY);
 
   header(ctx, s, a);
 
@@ -184,16 +205,16 @@ export function drawCover(ctx, s, a) {
     ctx.font = font(64, 800, true);
     const w = Math.max(150, ctx.measureText(s.label).width + 70);
     ctx.fillStyle = C.blue;
-    slant(ctx, W - 56 - w, 66, w, 92, 22);
+    slant(ctx, W - 56 - w, 66 + T, w, 92, 22);
     ctx.fill();
     ctx.fillStyle = C.white;
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
-    ctx.fillText(s.label, W - 56 - w / 2, 115);
+    ctx.fillText(s.label, W - 56 - w / 2, 115 + T);
   }
 
   // Überschrift
-  const top = 820;
+  const top = H - B - 530;
   ctx.textAlign = 'left';
   ctx.textBaseline = 'alphabetic';
   ctx.fillStyle = C.sky;
@@ -240,6 +261,9 @@ export function drawCover(ctx, s, a) {
 }
 
 /* ---------------- Spieltag-Übersicht ---------------- */
+// Höhe des Fotostreifens oben in der Spieltag-Vorlage
+export const photoHeight = () => T + 560;
+
 export function drawMatchday(ctx, s, a) {
   ctx.clearRect(0, 0, W, H);
   const g = ctx.createLinearGradient(0, 0, W, H);
@@ -251,34 +275,38 @@ export function drawMatchday(ctx, s, a) {
   if (a.photo) {
     ctx.save();
     ctx.globalAlpha = 0.55;
-    drawPhoto(ctx, a.photo, { x: 0, y: 0, w: W, h: 560 }, s.pan);
+    drawPhoto(ctx, a.photo, { x: 0, y: 0, w: W, h: photoHeight() }, s.pan);
     ctx.restore();
-    const fade = ctx.createLinearGradient(0, 120, 0, 560);
+    const fade = ctx.createLinearGradient(0, 120, 0, photoHeight());
     fade.addColorStop(0, 'rgba(12,32,72,0.2)');
     fade.addColorStop(1, 'rgba(12,32,72,1)');
     ctx.fillStyle = fade;
-    ctx.fillRect(0, 0, W, 560);
+    ctx.fillRect(0, 0, W, photoHeight());
   }
   stripes(ctx, 0.035);
 
   header(ctx, s, a);
 
+  // Im Quadrat ist weniger Platz: Überschrift kleiner, Liste rückt nach oben
+  const compact = H - T - B < 1200;
+  const titleY = T + (compact ? 300 : 360);
   ctx.textAlign = 'left';
   ctx.textBaseline = 'alphabetic';
   ctx.fillStyle = C.white;
-  fit(ctx, (s.title || '').toUpperCase(), W - 112, 168, 800, true);
-  ctx.fillText((s.title || '').toUpperCase(), 50, 360);
+  fit(ctx, (s.title || '').toUpperCase(), W - 112, compact ? 120 : 168, 800, true);
+  ctx.fillText((s.title || '').toUpperCase(), 50, titleY);
   ctx.fillStyle = C.sky;
-  ctx.font = font(46, 700, true);
-  spaced(ctx, (s.subtitle || '').toUpperCase(), 56, 422, 3);
+  ctx.font = font(compact ? 38 : 46, 700, true);
+  spaced(ctx, (s.subtitle || '').toUpperCase(), 56, titleY + (compact ? 52 : 62), 3);
 
   const rows = s.rows || [];
-  const bottom = H - 130;
-  const gap = 12;
-  const rowH = rows.length ? Math.min(118, (bottom - 470 - gap * (rows.length - 1)) / rows.length) : 0;
+  const listTop = titleY + (compact ? 92 : 110);
+  const bottom = H - B - 130;
+  const gap = compact ? 8 : 12;
+  const rowH = rows.length ? Math.min(118, (bottom - listTop - gap * (rows.length - 1)) / rows.length) : 0;
   // Bei wenigen Spielen den Block im freien Bereich mittig setzen
   const blockH = rows.length * rowH + Math.max(0, rows.length - 1) * gap;
-  const top = 470 + Math.max(0, (bottom - 470 - blockH) / 2 - 40);
+  const top = listTop + Math.max(0, (bottom - listTop - blockH) / 2 - 40);
   const results = s.mode === 'ergebnisse';
 
   rows.forEach((r, i) => {
@@ -341,7 +369,7 @@ export function drawMatchday(ctx, s, a) {
     ctx.fillStyle = C.muted;
     ctx.textAlign = 'center';
     ctx.font = font(44, 600);
-    ctx.fillText('Keine Spiele in diesem Zeitraum', W / 2, 760);
+    ctx.fillText('Keine Spiele in diesem Zeitraum', W / 2, (listTop + bottom) / 2);
   }
 
   footer(ctx, s.footer || 'ALLE SPIELE AUF BFV.DE', s.handle || '');

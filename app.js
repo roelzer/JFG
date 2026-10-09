@@ -1,4 +1,5 @@
-import { W, H, drawCover, drawMatchday } from './render.js';
+import { W, FORMATS, setFormat, photoHeight, drawCover, drawMatchday } from './render.js';
+import * as R from './render.js';
 import { BFV_API, normalizeTeamMatches, outcome } from './bfv.js';
 
 const $ = (id) => document.getElementById(id);
@@ -303,7 +304,7 @@ canvas.addEventListener('pointermove', (e) => {
   const rect = canvas.getBoundingClientRect();
   const k = W / rect.width;
   const img = state.photo;
-  const boxH = state.tab === 'cover' ? H : 560;
+  const boxH = state.tab === 'cover' ? R.H : photoHeight();
   const scale = Math.max(W / img.width, boxH / img.height) * state.pan.zoom;
   const spareX = (img.width * scale - W) / 2 || 1;
   const spareY = (img.height * scale - boxH) / 2 || 1;
@@ -353,6 +354,21 @@ $('logoInput').addEventListener('change', async (e) => {
   draw();
 });
 $('refreshBtn').addEventListener('click', refreshLive);
+
+/* ---------- Format ---------- */
+function applyFormat(key) {
+  setFormat(key);
+  canvas.width = W;
+  canvas.height = R.H;
+  store.set('format', key);
+  draw();
+}
+const formatSel = $('format');
+Object.entries(FORMATS).forEach(([k, f]) => formatSel.append(new Option(f.name, k)));
+formatSel.value = FORMATS[store.get('format', '4:5')] ? store.get('format', '4:5') : '4:5';
+formatSel.addEventListener('change', () => applyFormat(formatSel.value));
+setFormat(formatSel.value);
+canvas.height = R.H;
 
 /* ---------- Start ---------- */
 (async () => {

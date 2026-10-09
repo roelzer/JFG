@@ -60,7 +60,7 @@ main {
 
 .canvas-wrap { position: relative; }
 canvas {
-  display: block; width: 100%; height: auto; aspect-ratio: 4 / 5;
+  display: block; width: auto; max-width: 100%; height: auto; margin: 0 auto;
   max-height: calc(100vh - 220px); object-fit: contain;
   border-radius: 14px; background: #0a1a3a;
   box-shadow: 0 10px 30px rgba(10,26,58,.25);
@@ -138,3 +138,4 @@ input, select {
 .rows li .meta { grid-column: 1 / -1; display: grid; grid-template-columns: 1.2fr 1fr 1fr 1fr; gap: 6px; }
 .rows li select { padding: 8px; font-size: 15px; background: var(--panel); }
 .rows li .x { padding: 6px 10px; }
+.note { margin: 0; font-size: 13px; color: var(--muted); }
