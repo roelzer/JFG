@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Rothsee Insta-Studio</title>
+  <meta name="theme-color" content="#0a1a3a">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;1,600;1,700;1,800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="brand">
+      <span class="dot"></span>
+      <div>
+        <h1>Insta-Studio</h1>
+        <p>JFG Rothsee Süd</p>
+      </div>
+    </div>
+    <nav class="tabs" role="tablist">
+      <button role="tab" data-tab="cover" aria-selected="true">Deckblatt</button>
+      <button role="tab" data-tab="matchday" aria-selected="false">Spieltag</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="preview">
+      <div class="canvas-wrap">
+        <canvas id="canvas" width="1080" height="1350" aria-label="Vorschau des Instagram-Bilds"></canvas>
+        <p class="hint" id="panHint">Foto mit dem Finger verschieben</p>
+      </div>
+      <div class="actions">
+        <button class="primary" id="shareBtn">Teilen</button>
+        <button id="downloadBtn">Herunterladen</button>
+      </div>
+      <p class="status" id="status"></p>
+    </section>
+
+    <section class="controls">
+      <!-- Foto (beide Vorlagen) -->
+      <fieldset>
+        <legend>Foto</legend>
+        <label class="file">
+          <input type="file" id="photoInput" accept="image/*">
+          <span>Foto auswählen</span>
+        </label>
+        <div class="row" id="zoomRow" hidden>
+          <label for="zoom">Zoom</label>
+          <input type="range" id="zoom" min="1" max="3" step="0.01" value="1">
+          <button class="ghost small" id="removePhoto">Entfernen</button>
+        </div>
+      </fieldset>
+
+      <!-- Deckblatt -->
+      <div data-panel="cover">
+        <fieldset>
+          <legend>Spiel</legend>
+          <label>Spiel vom BFV
+            <select id="matchSelect"></select>
+          </label>
+          <label>Überschrift
+            <input id="kicker" list="kickerList" value="Spielbericht">
+            <datalist id="kickerList">
+              <option value="Spielbericht"><option value="Endstand"><option value="Matchday">
+              <option value="Spielvorschau"><option value="Sieg!"><option value="Heimspiel">
+            </datalist>
+          </label>
+          <div class="grid2">
+            <label>Altersklasse <input id="label" placeholder="U15"></label>
+            <label>Ergebnis <input id="result" placeholder="3:1" inputmode="numeric"></label>
+            <label>Heim <input id="home"></label>
+            <label>Gast <input id="guest"></label>
+            <label>Datum <input id="date" type="date"></label>
+            <label>Uhrzeit <input id="time" type="time"></label>
+          </div>
+          <label>Wettbewerb <input id="competition"></label>
+          <label class="check"><input type="checkbox" id="isHome" checked> JFG ist Heimmannschaft</label>
+        </fieldset>
+      </div>
+
+      <!-- Spieltag -->
+      <div data-panel="matchday" hidden>
+        <fieldset>
+          <legend>Zeitraum</legend>
+          <div class="week">
+            <button class="ghost" id="prevWeek" aria-label="Vorherige Woche">‹</button>
+            <strong id="weekLabel"></strong>
+            <button class="ghost" id="nextWeek" aria-label="Nächste Woche">›</button>
+          </div>
+          <div class="seg" role="radiogroup">
+            <label><input type="radio" name="mode" value="vorschau" checked><span>Vorschau</span></label>
+            <label><input type="radio" name="mode" value="ergebnisse"><span>Ergebnisse</span></label>
+          </div>
+          <div class="grid2">
+            <label>Titel <input id="mdTitle" value="Spieltag"></label>
+            <label>Untertitel <input id="mdSubtitle"></label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Spiele</legend>
+          <ol id="rows" class="rows"></ol>
+          <button class="ghost" id="addRow">+ Spiel hinzufügen</button>
+        </fieldset>
+      </div>
+
+      <details>
+        <summary>Einstellungen</summary>
+        <label class="file">
+          <input type="file" id="logoInput" accept="image/png,image/svg+xml,image/webp,image/jpeg">
+          <span>Vereinslogo ersetzen</span>
+        </label>
+        <label>Instagram-Name <input id="handle"></label>
+        <label>Zeile unter dem Vereinsnamen <input id="subline" value="Jugendfußball"></label>
+        <button class="ghost small" id="refreshBtn">Daten jetzt vom BFV laden</button>
+      </details>
+    </section>
+  </main>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>

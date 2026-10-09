@@ -1,0 +1,42 @@
+name: BFV-Daten aktualisieren
+
+on:
+  schedule:
+    # alle 3 Stunden, am Wochenende zusätzlich stündlich zwischen 10 und 20 Uhr
+    - cron: '17 */3 * * *'
+    - cron: '47 8-18 * * 6,0'
+  workflow_dispatch:
+  push:
+    paths: ['teams.json', 'scripts/**', 'bfv.js']
+
+permissions:
+  contents: write
+
+concurrency:
+  group: bfv-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node scripts/update.mjs
+      - name: Änderungen committen
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data logos
+          if git diff --cached --quiet -- data/spiele.json logos; then
+            echo "Keine Änderungen"; exit 0
+          fi
+          # Nur der Zeitstempel geändert? Dann nicht committen.
+          if [ "$(git diff --cached --numstat -- logos | wc -l)" = "0" ] && \
+             [ "$(git diff --cached -U0 -- data/spiele.json | grep -E '^[+-] ' | grep -vc '"updated"')" = "0" ]; then
+            echo "Nur Zeitstempel geändert"; exit 0
+          fi
+          git commit -m "BFV-Daten aktualisiert"
+          git push

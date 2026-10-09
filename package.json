@@ -1,0 +1,8 @@
+{
+  "name": "jfg-rothsee-insta",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "update": "node scripts/update.mjs"
+  }
+}
