@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-11T12:44:59.804Z",
+ "updated": "2026-10-12T10:43:33.703Z",
  "club": {
   "name": "JFG Rothsee Süd",
   "instagram": "@rothseekicker",
@@ -602,22 +602,6 @@
    "competitionType": "Pokale"
   },
   {
-   "id": "031M6EC5S4000000VS5489BTVSRD0UH9",
-   "teamId": "0182T5L5T8000000VV0AG80NVTL7UGGC",
-   "label": "U19",
-   "date": "2026-10-14",
-   "time": "19:00",
-   "home": "(SG) 1. FC Gunzenhausen",
-   "guest": "JFG Rothsee Süd",
-   "homeClubId": "00ES8GNKL000001FVV0AG08LVUPGND5I",
-   "guestClubId": "016G94T91K000000VV0AG80NVUNAS2C2",
-   "isHome": false,
-   "opponent": "(SG) 1. FC Gunzenhausen",
-   "result": "",
-   "competition": "U 19 (A-Jun.) KL Neumarkt/Jura Südwest",
-   "competitionType": "Meisterschaften"
-  },
-  {
    "id": "031M6EC5AK000000VS5489BTVSRD0UH9",
    "teamId": "0182T5L5T8000000VV0AG80NVTL7UGGC",
    "label": "U19",
@@ -791,6 +775,22 @@
    "opponent": "TV 1848 Erlangen",
    "result": "",
    "competition": "U 15 (C-Jun.) BOL Mittelfranken",
+   "competitionType": "Meisterschaften"
+  },
+  {
+   "id": "031M6EC5S4000000VS5489BTVSRD0UH9",
+   "teamId": "0182T5L5T8000000VV0AG80NVTL7UGGC",
+   "label": "U19",
+   "date": "2026-10-31",
+   "time": "15:30",
+   "home": "(SG) 1. FC Gunzenhausen",
+   "guest": "JFG Rothsee Süd",
+   "homeClubId": "00ES8GNKL000001FVV0AG08LVUPGND5I",
+   "guestClubId": "016G94T91K000000VV0AG80NVUNAS2C2",
+   "isHome": false,
+   "opponent": "(SG) 1. FC Gunzenhausen",
+   "result": "",
+   "competition": "U 19 (A-Jun.) KL Neumarkt/Jura Südwest",
    "competitionType": "Meisterschaften"
   },
   {
@@ -1631,9 +1631,9 @@
   "00ES8GNKM800000DVV0AG08LVUPGND5I": "logos/00ES8GNKM800000DVV0AG08LVUPGND5I.png",
   "00ES8GNKL0000017VV0AG08LVUPGND5I": "logos/00ES8GNKL0000017VV0AG08LVUPGND5I.png",
   "00ES8GNKNG00000NVV0AG08LVUPGND5I": "logos/00ES8GNKNG00000NVV0AG08LVUPGND5I.png",
-  "00ES8GNKL000001FVV0AG08LVUPGND5I": "logos/00ES8GNKL000001FVV0AG08LVUPGND5I.png",
   "00ES8GNJLK00000LVV0AG08LVUPGND5I": "logos/00ES8GNJLK00000LVV0AG08LVUPGND5I.png",
   "00V7CV4QQO000000VV0AG811VTEQ0GTM": "logos/00V7CV4QQO000000VV0AG811VTEQ0GTM.png",
+  "00ES8GNKL000001FVV0AG08LVUPGND5I": "logos/00ES8GNKL000001FVV0AG08LVUPGND5I.png",
   "00ES8GNHN400000TVV0AG08LVUPGND5I": "logos/00ES8GNHN400000TVV0AG08LVUPGND5I.png",
   "00ES8GNKM8000005VV0AG08LVUPGND5I": "logos/00ES8GNKM8000005VV0AG08LVUPGND5I.png",
   "00ES8GNKM8000016VV0AG08LVUPGND5I": "logos/00ES8GNKM8000016VV0AG08LVUPGND5I.png",
