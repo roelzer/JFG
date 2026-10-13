@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-12T10:43:33.703Z",
+ "updated": "2026-10-13T10:30:40.110Z",
  "club": {
   "name": "JFG Rothsee Süd",
   "instagram": "@rothseekicker",
@@ -586,22 +586,6 @@
    "competitionType": "Meisterschaften"
   },
   {
-   "id": "032AUOGEP0000000VS5489BTVU989P58",
-   "teamId": "016VG9A9M4000000VV0AG80NVSTF8QA3",
-   "label": "U15",
-   "date": "2026-10-14",
-   "time": "18:30",
-   "home": "FC Wendelstein",
-   "guest": "JFG Rothsee Süd",
-   "homeClubId": "01VR2LQM88000000VS54898FVU8D1IS3",
-   "guestClubId": "016G94T91K000000VV0AG80NVUNAS2C2",
-   "isHome": false,
-   "opponent": "FC Wendelstein",
-   "result": "",
-   "competition": "U 15 (C-Jun.) BFV-Pokal Kreis Neumarkt/Jura - Viertelfinale",
-   "competitionType": "Pokale"
-  },
-  {
    "id": "031M6EC5AK000000VS5489BTVSRD0UH9",
    "teamId": "0182T5L5T8000000VV0AG80NVTL7UGGC",
    "label": "U19",
@@ -808,6 +792,22 @@
    "result": "",
    "competition": "U 17 (B-Jun.) BOL Mittelfranken",
    "competitionType": "Meisterschaften"
+  },
+  {
+   "id": "032AUOGEP0000000VS5489BTVU989P58",
+   "teamId": "016VG9A9M4000000VV0AG80NVSTF8QA3",
+   "label": "U15",
+   "date": "2026-11-04",
+   "time": "18:30",
+   "home": "FC Wendelstein",
+   "guest": "JFG Rothsee Süd",
+   "homeClubId": "01VR2LQM88000000VS54898FVU8D1IS3",
+   "guestClubId": "016G94T91K000000VV0AG80NVUNAS2C2",
+   "isHome": false,
+   "opponent": "FC Wendelstein",
+   "result": "",
+   "competition": "U 15 (C-Jun.) BFV-Pokal Kreis Neumarkt/Jura - Viertelfinale",
+   "competitionType": "Pokale"
   },
   {
    "id": "031LH5A9IS000000VS5489BTVSRD0UH9",
@@ -1650,9 +1650,9 @@
   "00ES8GNKL0000000VV0AG08LVUPGND5I": "logos/00ES8GNKL0000000VV0AG08LVUPGND5I.png",
   "00ES8GNKIG00001DVV0AG08LVUPGND5I": "logos/00ES8GNKIG00001DVV0AG08LVUPGND5I.png",
   "00ES8GNKJO00000AVV0AG08LVUPGND5I": "logos/00ES8GNKJO00000AVV0AG08LVUPGND5I.png",
-  "01VR2LQM88000000VS54898FVU8D1IS3": "logos/01VR2LQM88000000VS54898FVU8D1IS3.png",
   "00ES8GNKEO00001HVV0AG08LVUPGND5I": "logos/00ES8GNKEO00001HVV0AG08LVUPGND5I.png",
   "00ES8GNKR8000018VV0AG08LVUPGND5I": "logos/00ES8GNKR8000018VV0AG08LVUPGND5I.png",
+  "01VR2LQM88000000VS54898FVU8D1IS3": "logos/01VR2LQM88000000VS54898FVU8D1IS3.png",
   "00ES8GNKDG000012VV0AG08LVUPGND5I": "logos/00ES8GNKDG000012VV0AG08LVUPGND5I.png",
   "00ES8GNKL000000BVV0AG08LVUPGND5I": "logos/00ES8GNKL000000BVV0AG08LVUPGND5I.png"
  }
