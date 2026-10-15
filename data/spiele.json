@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-14T21:38:42.338Z",
+ "updated": "2026-10-15T16:57:32.895Z",
  "club": {
   "name": "JFG Rothsee Süd",
   "instagram": "@rothseekicker",
@@ -618,22 +618,6 @@
    "competitionType": "Meisterschaften"
   },
   {
-   "id": "031LH5AACK000000VS5489BTVSRD0UH9",
-   "teamId": "016VG9A9M4000000VV0AG80NVSTF8QA3",
-   "label": "U15",
-   "date": "2026-10-17",
-   "time": "11:00",
-   "home": "1. FC Nürnberg U17w",
-   "guest": "JFG Rothsee Süd",
-   "homeClubId": "00ES8GNKEO00001HVV0AG08LVUPGND5I",
-   "guestClubId": "016G94T91K000000VV0AG80NVUNAS2C2",
-   "isHome": false,
-   "opponent": "1. FC Nürnberg U17w",
-   "result": "",
-   "competition": "U 15 (C-Jun.) BOL Mittelfranken",
-   "competitionType": "Meisterschaften"
-  },
-  {
    "id": "031LH9QHRK000000VS5489BTVSRD0UH9",
    "teamId": "017F5H48CG000000VV0AG811VVU4E1VH",
    "label": "U17",
@@ -647,6 +631,22 @@
    "opponent": "SGV Nürnberg-Fürth 1883 2",
    "result": "",
    "competition": "U 17 (B-Jun.) BOL Mittelfranken",
+   "competitionType": "Meisterschaften"
+  },
+  {
+   "id": "031LH5AACK000000VS5489BTVSRD0UH9",
+   "teamId": "016VG9A9M4000000VV0AG80NVSTF8QA3",
+   "label": "U15",
+   "date": "2026-10-18",
+   "time": "11:00",
+   "home": "1. FC Nürnberg U17w",
+   "guest": "JFG Rothsee Süd",
+   "homeClubId": "00ES8GNKEO00001HVV0AG08LVUPGND5I",
+   "guestClubId": "016G94T91K000000VV0AG80NVUNAS2C2",
+   "isHome": false,
+   "opponent": "1. FC Nürnberg U17w",
+   "result": "",
+   "competition": "U 15 (C-Jun.) BOL Mittelfranken",
    "competitionType": "Meisterschaften"
   },
   {
