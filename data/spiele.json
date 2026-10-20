@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-19T13:06:59.470Z",
+ "updated": "2026-10-20T14:17:17.291Z",
  "club": {
   "name": "JFG Rothsee Süd",
   "instagram": "@rothseekicker",
@@ -1018,6 +1018,22 @@
    "competitionType": "Meisterschaften"
   },
   {
+   "id": "032ERS17E0000000VS5489BTVU989P58",
+   "teamId": "016VG9A9M4000000VV0AG80NVSTF8QA3",
+   "label": "U15",
+   "date": "2027-02-27",
+   "time": "16:15",
+   "home": "VfB Eichstätt",
+   "guest": "JFG Rothsee Süd",
+   "homeClubId": "00ES8GNHN4000008VV0AG08LVUPGND5I",
+   "guestClubId": "016G94T91K000000VV0AG80NVUNAS2C2",
+   "isHome": false,
+   "opponent": "VfB Eichstätt",
+   "result": "",
+   "competition": "Freundschaftsspiel",
+   "competitionType": "Freundschaftsspiele"
+  },
+  {
    "id": "031LH5AH5G000000VS5489BTVSRD0UH9",
    "teamId": "016VG9A9M4000000VV0AG80NVSTF8QA3",
    "label": "U15",
@@ -1654,6 +1670,7 @@
   "00ES8GNKR8000018VV0AG08LVUPGND5I": "logos/00ES8GNKR8000018VV0AG08LVUPGND5I.png",
   "01VR2LQM88000000VS54898FVU8D1IS3": "logos/01VR2LQM88000000VS54898FVU8D1IS3.png",
   "00ES8GNKDG000012VV0AG08LVUPGND5I": "logos/00ES8GNKDG000012VV0AG08LVUPGND5I.png",
-  "00ES8GNKL000000BVV0AG08LVUPGND5I": "logos/00ES8GNKL000000BVV0AG08LVUPGND5I.png"
+  "00ES8GNKL000000BVV0AG08LVUPGND5I": "logos/00ES8GNKL000000BVV0AG08LVUPGND5I.png",
+  "00ES8GNHN4000008VV0AG08LVUPGND5I": "logos/00ES8GNHN4000008VV0AG08LVUPGND5I.png"
  }
 }
