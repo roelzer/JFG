@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-20T14:17:17.291Z",
+ "updated": "2026-10-21T21:39:31.589Z",
  "club": {
   "name": "JFG Rothsee Süd",
   "instagram": "@rothseekicker",
@@ -661,7 +661,7 @@
    "guestClubId": "00ES8GNJLK00000LVV0AG08LVUPGND5I",
    "isHome": true,
    "opponent": "1. FC Beilngries",
-   "result": "",
+   "result": "1:5",
    "competition": "U 19 (A-Jun.) KL Neumarkt/Jura Südwest",
    "competitionType": "Meisterschaften"
   },
@@ -1016,6 +1016,54 @@
    "result": "",
    "competition": "U 17 (B-Jun.) BOL Mittelfranken",
    "competitionType": "Meisterschaften"
+  },
+  {
+   "id": "032FB7RFL8000000VS5489BUVSGKI48U",
+   "teamId": "017F5H48CG000000VV0AG811VVU4E1VH",
+   "label": "U17",
+   "date": "2026-12-12",
+   "time": "14:00",
+   "home": "DJK Ingolstadt U16",
+   "guest": "JFG Rothsee Süd",
+   "homeClubId": "00ES8GNHN400000TVV0AG08LVUPGND5I",
+   "guestClubId": "016G94T91K000000VV0AG80NVUNAS2C2",
+   "isHome": false,
+   "opponent": "DJK Ingolstadt U16",
+   "result": "",
+   "competition": "Freundschaftsspiel",
+   "competitionType": "Freundschaftsspiele"
+  },
+  {
+   "id": "032FA8073K000000VS5489BTVU989P58",
+   "teamId": "017F5H48CG000000VV0AG811VVU4E1VH",
+   "label": "U17",
+   "date": "2027-02-20",
+   "time": "12:30",
+   "home": "DJK Ingolstadt U16",
+   "guest": "JFG Rothsee Süd",
+   "homeClubId": "00ES8GNHN400000TVV0AG08LVUPGND5I",
+   "guestClubId": "016G94T91K000000VV0AG80NVUNAS2C2",
+   "isHome": false,
+   "opponent": "DJK Ingolstadt U16",
+   "result": "",
+   "competition": "Freundschaftsspiel",
+   "competitionType": "Freundschaftsspiele"
+  },
+  {
+   "id": "032FA918I4000000VS5489BTVU989P58",
+   "teamId": "017F5H48CG000000VV0AG811VVU4E1VH",
+   "label": "U17",
+   "date": "2027-02-21",
+   "time": "14:00",
+   "home": "DJK Ingolstadt U16",
+   "guest": "JFG Rothsee Süd",
+   "homeClubId": "00ES8GNHN400000TVV0AG08LVUPGND5I",
+   "guestClubId": "016G94T91K000000VV0AG80NVUNAS2C2",
+   "isHome": false,
+   "opponent": "DJK Ingolstadt U16",
+   "result": "",
+   "competition": "Freundschaftsspiel",
+   "competitionType": "Freundschaftsspiele"
   },
   {
    "id": "032ERS17E0000000VS5489BTVU989P58",
