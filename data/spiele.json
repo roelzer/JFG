@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-25T11:21:03.254Z",
+ "updated": "2026-10-25T16:12:26.423Z",
  "club": {
   "name": "JFG Rothsee Süd",
   "instagram": "@rothseekicker",
@@ -746,6 +746,22 @@
    "competitionType": "Meisterschaften"
   },
   {
+   "id": "031LH9QHBS000000VS5489BTVSRD0UH9",
+   "teamId": "017F5H48CG000000VV0AG811VVU4E1VH",
+   "label": "U17",
+   "date": "2026-10-31",
+   "time": "12:30",
+   "home": "JFG Rothsee Süd",
+   "guest": "TSV 1860 Weißenburg",
+   "homeClubId": "016G94T91K000000VV0AG80NVUNAS2C2",
+   "guestClubId": "00ES8GNKNG00000EVV0AG08LVUPGND5I",
+   "isHome": true,
+   "opponent": "TSV 1860 Weißenburg",
+   "result": "",
+   "competition": "U 17 (B-Jun.) BOL Mittelfranken",
+   "competitionType": "Meisterschaften"
+  },
+  {
    "id": "031LH5A9RO000000VS5489BTVSRD0UH9",
    "teamId": "016VG9A9M4000000VV0AG80NVSTF8QA3",
    "label": "U15",
@@ -775,22 +791,6 @@
    "opponent": "(SG) 1. FC Gunzenhausen",
    "result": "",
    "competition": "U 19 (A-Jun.) KL Neumarkt/Jura Südwest",
-   "competitionType": "Meisterschaften"
-  },
-  {
-   "id": "031LH9QHBS000000VS5489BTVSRD0UH9",
-   "teamId": "017F5H48CG000000VV0AG811VVU4E1VH",
-   "label": "U17",
-   "date": "2026-10-31",
-   "time": "16:00",
-   "home": "JFG Rothsee Süd",
-   "guest": "TSV 1860 Weißenburg",
-   "homeClubId": "016G94T91K000000VV0AG80NVUNAS2C2",
-   "guestClubId": "00ES8GNKNG00000EVV0AG08LVUPGND5I",
-   "isHome": true,
-   "opponent": "TSV 1860 Weißenburg",
-   "result": "",
-   "competition": "U 17 (B-Jun.) BOL Mittelfranken",
    "competitionType": "Meisterschaften"
   },
   {
