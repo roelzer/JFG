@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-24T12:56:42.437Z",
+ "updated": "2026-10-25T11:21:03.254Z",
  "club": {
   "name": "JFG Rothsee Süd",
   "instagram": "@rothseekicker",
@@ -592,12 +592,12 @@
    "date": "2026-10-16",
    "time": "19:00",
    "home": "(SG) TSV 1860 Weißenburg",
-   "guest": " (JFG Rothsee Süd)",
+   "guest": "JFG Rothsee Süd",
    "homeClubId": "00ES8GNKNG00000EVV0AG08LVUPGND5I",
    "guestClubId": "016G94T91K000000VV0AG80NVUNAS2C2",
    "isHome": false,
    "opponent": "(SG) TSV 1860 Weißenburg",
-   "result": "",
+   "result": "2:0",
    "competition": "U 19 (A-Jun.) KL Neumarkt/Jura Südwest",
    "competitionType": "Meisterschaften"
   },
