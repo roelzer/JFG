@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-27T22:10:32.438Z",
+ "updated": "2026-10-29T18:26:45.976Z",
  "club": {
   "name": "JFG Rothsee Süd",
   "instagram": "@rothseekicker",
@@ -1029,6 +1029,22 @@
    "guestClubId": "016G94T91K000000VV0AG80NVUNAS2C2",
    "isHome": false,
    "opponent": "DJK Ingolstadt U16",
+   "result": "",
+   "competition": "Freundschaftsspiel",
+   "competitionType": "Freundschaftsspiele"
+  },
+  {
+   "id": "032HQ8BERK000000VS5489BTVU989P58",
+   "teamId": "016VG9A9M4000000VV0AG80NVSTF8QA3",
+   "label": "U15",
+   "date": "2027-02-07",
+   "time": "10:00",
+   "home": "SG QUELLE Fürth U15",
+   "guest": "JFG Rothsee Süd",
+   "homeClubId": "00ES8GNKEO000006VV0AG08LVUPGND5I",
+   "guestClubId": "016G94T91K000000VV0AG80NVUNAS2C2",
+   "isHome": false,
+   "opponent": "SG QUELLE Fürth U15",
    "result": "",
    "competition": "Freundschaftsspiel",
    "competitionType": "Freundschaftsspiele"
