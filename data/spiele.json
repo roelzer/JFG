@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-29T18:26:45.976Z",
+ "updated": "2026-10-30T17:59:07.959Z",
  "club": {
   "name": "JFG Rothsee Süd",
   "instagram": "@rothseekicker",
@@ -704,11 +704,11 @@
    "date": "2026-10-25",
    "time": "12:00",
    "home": "JFG Rothsee Süd",
-   "guest": "JFG Jura-Schwarzachtal",
+   "guest": " (JFG Jura-Schwarzachtal)",
    "homeClubId": "016G94T91K000000VV0AG80NVUNAS2C2",
    "guestClubId": "00V7CV4QQO000000VV0AG811VTEQ0GTM",
    "isHome": true,
-   "opponent": "JFG Jura-Schwarzachtal",
+   "opponent": " (JFG Jura-Schwarzachtal)",
    "result": "",
    "competition": "U 19 (A-Jun.) KL Neumarkt/Jura Südwest",
    "competitionType": "Meisterschaften"
