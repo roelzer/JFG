@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-30T17:59:07.959Z",
+ "updated": "2026-10-31T12:20:42.687Z",
  "club": {
   "name": "JFG Rothsee Süd",
   "instagram": "@rothseekicker",
@@ -757,7 +757,7 @@
    "guestClubId": "00ES8GNKNG00000EVV0AG08LVUPGND5I",
    "isHome": true,
    "opponent": "TSV 1860 Weißenburg",
-   "result": "",
+   "result": "0:0",
    "competition": "U 17 (B-Jun.) BOL Mittelfranken",
    "competitionType": "Meisterschaften"
   },
@@ -773,7 +773,7 @@
    "guestClubId": "00ES8GNKR8000018VV0AG08LVUPGND5I",
    "isHome": true,
    "opponent": "TV 1848 Erlangen",
-   "result": "",
+   "result": "0:0",
    "competition": "U 15 (C-Jun.) BOL Mittelfranken",
    "competitionType": "Meisterschaften"
   },
@@ -784,7 +784,7 @@
    "date": "2026-10-31",
    "time": "15:30",
    "home": "(SG) 1. FC Gunzenhausen",
-   "guest": "JFG Rothsee Süd",
+   "guest": " (JFG Rothsee Süd)",
    "homeClubId": "00ES8GNKL000001FVV0AG08LVUPGND5I",
    "guestClubId": "016G94T91K000000VV0AG80NVUNAS2C2",
    "isHome": false,
