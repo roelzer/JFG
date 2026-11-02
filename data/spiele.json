@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-31T14:49:05.912Z",
+ "updated": "2026-11-02T10:57:35.612Z",
  "club": {
   "name": "JFG Rothsee Süd",
   "instagram": "@rothseekicker",
@@ -30,49 +30,9 @@
    "competition": "U 17 (B-Jun.) BOL Mittelfranken",
    "label": "U17",
    "clubId": "016G94T91K000000VV0AG80NVUNAS2C2"
-  },
-  {
-   "id": "016VG9A9M4000000VV0AG80NVSTF8QA3",
-   "name": "JFG Rothsee Süd",
-   "typeName": "C-Junioren",
-   "competition": "U 15 (C-Jun.) BOL Mittelfranken",
-   "label": "U15",
-   "clubId": "016G94T91K000000VV0AG80NVUNAS2C2"
   }
  ],
  "matches": [
-  {
-   "id": "031FV2IMHC000000VS5489BUVSJ4CRAP",
-   "teamId": "016VG9A9M4000000VV0AG80NVSTF8QA3",
-   "label": "U15",
-   "date": "2026-07-18",
-   "time": "12:30",
-   "home": "JFG Rothsee Süd",
-   "guest": "SG QUELLE Fürth U15",
-   "homeClubId": "016G94T91K000000VV0AG80NVUNAS2C2",
-   "guestClubId": "00ES8GNKEO000006VV0AG08LVUPGND5I",
-   "isHome": true,
-   "opponent": "SG QUELLE Fürth U15",
-   "result": "0:7",
-   "competition": "Freundschaftsspiel",
-   "competitionType": "Freundschaftsspiele"
-  },
-  {
-   "id": "031H21J5M4000000VS5489BUVSJ4CRAP",
-   "teamId": "016VG9A9M4000000VV0AG80NVSTF8QA3",
-   "label": "U15",
-   "date": "2026-07-25",
-   "time": "10:30",
-   "home": "(SG) TV 21 Büchenbach",
-   "guest": "JFG Rothsee Süd",
-   "homeClubId": "00ES8GNKL000000QVV0AG08LVUPGND5I",
-   "guestClubId": "016G94T91K000000VV0AG80NVUNAS2C2",
-   "isHome": false,
-   "opponent": "(SG) TV 21 Büchenbach",
-   "result": "1:4",
-   "competition": "Freundschaftsspiel",
-   "competitionType": "Freundschaftsspiele"
-  },
   {
    "id": "031IJ5JJC4000000VS5489BUVVKNMR0J",
    "teamId": "017F65UHF0000000VV0AG80NVVSGSEQ6",
@@ -138,22 +98,6 @@
    "competitionType": "Freundschaftsspiele"
   },
   {
-   "id": "031V1L0SFK000000VS5489BTVT7QHFUC",
-   "teamId": "016VG9A9M4000000VV0AG80NVSTF8QA3",
-   "label": "U15",
-   "date": "2026-09-08",
-   "time": "18:00",
-   "home": "JFG Rothsee Süd",
-   "guest": "TSG 08 Roth",
-   "homeClubId": "016G94T91K000000VV0AG80NVUNAS2C2",
-   "guestClubId": "00ES8GNKM8000017VV0AG08LVUPGND5I",
-   "isHome": true,
-   "opponent": "TSG 08 Roth",
-   "result": "10:0",
-   "competition": "Freundschaftsspiel",
-   "competitionType": "Freundschaftsspiele"
-  },
-  {
    "id": "031OC4FHH8000000VS5489BUVT2M8LCU",
    "teamId": "017F65UHF0000000VV0AG80NVVSGSEQ6",
    "label": "U13",
@@ -199,38 +143,6 @@
    "opponent": "SPIELFREI",
    "result": "",
    "competition": "U 19 (A-Jun.) KL Neumarkt/Jura Südwest",
-   "competitionType": "Meisterschaften"
-  },
-  {
-   "id": "031OC3KQGO000000VS5489BUVT2M8LCU",
-   "teamId": "016VG9A9M4000000VV0AG80NVSTF8QA3",
-   "label": "U15",
-   "date": "2026-09-13",
-   "time": "10:30",
-   "home": "ASV Neumarkt 2",
-   "guest": "JFG Rothsee Süd",
-   "homeClubId": "00ES8GNKJO00000NVV0AG08LVUPGND5I",
-   "guestClubId": "016G94T91K000000VV0AG80NVUNAS2C2",
-   "isHome": false,
-   "opponent": "ASV Neumarkt 2",
-   "result": "3:3",
-   "competition": "Freundschaftsspiel",
-   "competitionType": "Freundschaftsspiele"
-  },
-  {
-   "id": "031LH5ABCO000000VS5489BTVSRD0UH9",
-   "teamId": "016VG9A9M4000000VV0AG80NVSTF8QA3",
-   "label": "U15",
-   "date": "2026-09-18",
-   "time": "18:00",
-   "home": "TSV Buch",
-   "guest": "JFG Rothsee Süd",
-   "homeClubId": "00ES8GNKEO00000LVV0AG08LVUPGND5I",
-   "guestClubId": "016G94T91K000000VV0AG80NVUNAS2C2",
-   "isHome": false,
-   "opponent": "TSV Buch",
-   "result": "0:3",
-   "competition": "U 15 (C-Jun.) BOL Mittelfranken",
    "competitionType": "Meisterschaften"
   },
   {
@@ -314,22 +226,6 @@
    "competitionType": "Pokale"
   },
   {
-   "id": "031LH5AC2K000000VS5489BTVSRD0UH9",
-   "teamId": "016VG9A9M4000000VV0AG80NVSTF8QA3",
-   "label": "U15",
-   "date": "2026-09-23",
-   "time": "19:00",
-   "home": "Post SV Nürnberg",
-   "guest": "JFG Rothsee Süd",
-   "homeClubId": "00ES8GNKG000000JVV0AG08LVUPGND5I",
-   "guestClubId": "016G94T91K000000VV0AG80NVUNAS2C2",
-   "isHome": false,
-   "opponent": "Post SV Nürnberg",
-   "result": "2:0",
-   "competition": "U 15 (C-Jun.) BOL Mittelfranken",
-   "competitionType": "Meisterschaften"
-  },
-  {
    "id": "031LGSVU00000000VS5489BTVSRD0UH9",
    "teamId": "017F65UHF0000000VV0AG80NVVSGSEQ6",
    "label": "U13",
@@ -343,22 +239,6 @@
    "opponent": "SC Eltersdorf 2",
    "result": "8:1",
    "competition": "U 13 (D-Jun.) BOL Mittelfranken",
-   "competitionType": "Meisterschaften"
-  },
-  {
-   "id": "031LH5AB4K000000VS5489BTVSRD0UH9",
-   "teamId": "016VG9A9M4000000VV0AG80NVSTF8QA3",
-   "label": "U15",
-   "date": "2026-09-26",
-   "time": "13:00",
-   "home": "JFG Rothsee Süd",
-   "guest": "FSV Erlangen-Bruck",
-   "homeClubId": "016G94T91K000000VV0AG80NVUNAS2C2",
-   "guestClubId": "00ES8GNKR800001CVV0AG08LVUPGND5I",
-   "isHome": true,
-   "opponent": "FSV Erlangen-Bruck",
-   "result": "2:1",
-   "competition": "U 15 (C-Jun.) BOL Mittelfranken",
    "competitionType": "Meisterschaften"
   },
   {
@@ -378,22 +258,6 @@
    "competitionType": "Meisterschaften"
   },
   {
-   "id": "03247C0TNC000000VS5489BUVV5UN1SE",
-   "teamId": "016VG9A9M4000000VV0AG80NVSTF8QA3",
-   "label": "U15",
-   "date": "2026-09-30",
-   "time": "18:30",
-   "home": "(SG) TV Thalmässing",
-   "guest": "JFG Rothsee Süd",
-   "homeClubId": "00ES8GNKL0000000VV0AG08LVUPGND5I",
-   "guestClubId": "016G94T91K000000VV0AG80NVUNAS2C2",
-   "isHome": false,
-   "opponent": "(SG) TV Thalmässing",
-   "result": "1:2",
-   "competition": "U 15 (C-Jun.) BFV-Pokal Kreis Neumarkt/Jura - Runde 2",
-   "competitionType": "Pokale"
-  },
-  {
    "id": "031LGSVTPS000000VS5489BTVSRD0UH9",
    "teamId": "017F65UHF0000000VV0AG80NVVSGSEQ6",
    "label": "U13",
@@ -407,22 +271,6 @@
    "opponent": "TV 21 Büchenbach",
    "result": "1:4",
    "competition": "U 13 (D-Jun.) BOL Mittelfranken",
-   "competitionType": "Meisterschaften"
-  },
-  {
-   "id": "031LH5AAVC000000VS5489BTVSRD0UH9",
-   "teamId": "016VG9A9M4000000VV0AG80NVSTF8QA3",
-   "label": "U15",
-   "date": "2026-10-03",
-   "time": "12:00",
-   "home": "1. SC Feucht",
-   "guest": "JFG Rothsee Süd",
-   "homeClubId": "00ES8GNKIG00001DVV0AG08LVUPGND5I",
-   "guestClubId": "016G94T91K000000VV0AG80NVUNAS2C2",
-   "isHome": false,
-   "opponent": "1. SC Feucht",
-   "result": "1:6",
-   "competition": "U 15 (C-Jun.) BOL Mittelfranken",
    "competitionType": "Meisterschaften"
   },
   {
@@ -490,22 +338,6 @@
    "competitionType": "Pokale"
   },
   {
-   "id": "0326F2CF8K000000VS5489BTVUCVBQ5B",
-   "teamId": "016VG9A9M4000000VV0AG80NVSTF8QA3",
-   "label": "U15",
-   "date": "2026-10-07",
-   "time": "18:30",
-   "home": "(SG) TV 1879 Hilpoltstein",
-   "guest": "JFG Rothsee Süd",
-   "homeClubId": "00ES8GNKJO00000AVV0AG08LVUPGND5I",
-   "guestClubId": "016G94T91K000000VV0AG80NVUNAS2C2",
-   "isHome": false,
-   "opponent": "(SG) TV 1879 Hilpoltstein",
-   "result": "0:10",
-   "competition": "U 15 (C-Jun.) BFV-Pokal Kreis Neumarkt/Jura - Runde 3",
-   "competitionType": "Pokale"
-  },
-  {
    "id": "031LGSVTN4000000VS5489BTVSRD0UH9",
    "teamId": "017F65UHF0000000VV0AG80NVVSGSEQ6",
    "label": "U13",
@@ -519,22 +351,6 @@
    "opponent": "SC Germania Nbg.",
    "result": "9:0",
    "competition": "U 13 (D-Jun.) BOL Mittelfranken",
-   "competitionType": "Meisterschaften"
-  },
-  {
-   "id": "031LH5AAJS000000VS5489BTVSRD0UH9",
-   "teamId": "016VG9A9M4000000VV0AG80NVSTF8QA3",
-   "label": "U15",
-   "date": "2026-10-10",
-   "time": "13:00",
-   "home": "JFG Rothsee Süd",
-   "guest": "SC Eltersdorf",
-   "homeClubId": "016G94T91K000000VV0AG80NVUNAS2C2",
-   "guestClubId": "00ES8GNKR8000011VV0AG08LVUPGND5I",
-   "isHome": true,
-   "opponent": "SC Eltersdorf",
-   "result": "2:0",
-   "competition": "U 15 (C-Jun.) BOL Mittelfranken",
    "competitionType": "Meisterschaften"
   },
   {
@@ -634,22 +450,6 @@
    "competitionType": "Meisterschaften"
   },
   {
-   "id": "031LH5AACK000000VS5489BTVSRD0UH9",
-   "teamId": "016VG9A9M4000000VV0AG80NVSTF8QA3",
-   "label": "U15",
-   "date": "2026-10-18",
-   "time": "11:00",
-   "home": "1. FC Nürnberg U17w",
-   "guest": "JFG Rothsee Süd",
-   "homeClubId": "00ES8GNKEO00001HVV0AG08LVUPGND5I",
-   "guestClubId": "016G94T91K000000VV0AG80NVUNAS2C2",
-   "isHome": false,
-   "opponent": "1. FC Nürnberg U17w",
-   "result": "0:10",
-   "competition": "U 15 (C-Jun.) BOL Mittelfranken",
-   "competitionType": "Meisterschaften"
-  },
-  {
    "id": "031M6EC5PG000000VS5489BTVSRD0UH9",
    "teamId": "0182T5L5T8000000VV0AG80NVTL7UGGC",
    "label": "U19",
@@ -679,22 +479,6 @@
    "opponent": "TSV 1860 Weißenburg",
    "result": "7:2",
    "competition": "U 13 (D-Jun.) BOL Mittelfranken",
-   "competitionType": "Meisterschaften"
-  },
-  {
-   "id": "031LH5AA3S000000VS5489BTVSRD0UH9",
-   "teamId": "016VG9A9M4000000VV0AG80NVSTF8QA3",
-   "label": "U15",
-   "date": "2026-10-25",
-   "time": "",
-   "home": "JFG Rothsee Süd",
-   "guest": "SPIELFREI",
-   "homeClubId": "016G94T91K000000VV0AG80NVUNAS2C2",
-   "guestClubId": "",
-   "isHome": true,
-   "opponent": "SPIELFREI",
-   "result": "",
-   "competition": "U 15 (C-Jun.) BOL Mittelfranken",
    "competitionType": "Meisterschaften"
   },
   {
@@ -762,22 +546,6 @@
    "competitionType": "Meisterschaften"
   },
   {
-   "id": "031LH5A9RO000000VS5489BTVSRD0UH9",
-   "teamId": "016VG9A9M4000000VV0AG80NVSTF8QA3",
-   "label": "U15",
-   "date": "2026-10-31",
-   "time": "13:00",
-   "home": "JFG Rothsee Süd",
-   "guest": "TV 1848 Erlangen",
-   "homeClubId": "016G94T91K000000VV0AG80NVUNAS2C2",
-   "guestClubId": "00ES8GNKR8000018VV0AG08LVUPGND5I",
-   "isHome": true,
-   "opponent": "TV 1848 Erlangen",
-   "result": "0:0",
-   "competition": "U 15 (C-Jun.) BOL Mittelfranken",
-   "competitionType": "Meisterschaften"
-  },
-  {
    "id": "031M6EC5S4000000VS5489BTVSRD0UH9",
    "teamId": "0182T5L5T8000000VV0AG80NVTL7UGGC",
    "label": "U19",
@@ -791,38 +559,6 @@
    "opponent": "(SG) 1. FC Gunzenhausen",
    "result": "",
    "competition": "U 19 (A-Jun.) KL Neumarkt/Jura Südwest",
-   "competitionType": "Meisterschaften"
-  },
-  {
-   "id": "032AUOGEP0000000VS5489BTVU989P58",
-   "teamId": "016VG9A9M4000000VV0AG80NVSTF8QA3",
-   "label": "U15",
-   "date": "2026-11-04",
-   "time": "18:30",
-   "home": "FC Wendelstein",
-   "guest": "JFG Rothsee Süd",
-   "homeClubId": "01VR2LQM88000000VS54898FVU8D1IS3",
-   "guestClubId": "016G94T91K000000VV0AG80NVUNAS2C2",
-   "isHome": false,
-   "opponent": "FC Wendelstein",
-   "result": "",
-   "competition": "U 15 (C-Jun.) BFV-Pokal Kreis Neumarkt/Jura - Viertelfinale",
-   "competitionType": "Pokale"
-  },
-  {
-   "id": "031LH5A9IS000000VS5489BTVSRD0UH9",
-   "teamId": "016VG9A9M4000000VV0AG80NVSTF8QA3",
-   "label": "U15",
-   "date": "2026-11-07",
-   "time": "11:30",
-   "home": "TSV 1946 Altenberg",
-   "guest": "JFG Rothsee Süd",
-   "homeClubId": "00ES8GNKDG000012VV0AG08LVUPGND5I",
-   "guestClubId": "016G94T91K000000VV0AG80NVUNAS2C2",
-   "isHome": false,
-   "opponent": "TSV 1946 Altenberg",
-   "result": "",
-   "competition": "U 15 (C-Jun.) BOL Mittelfranken",
    "competitionType": "Meisterschaften"
   },
   {
@@ -874,22 +610,6 @@
    "competitionType": "Meisterschaften"
   },
   {
-   "id": "031LH5A9E8000000VS5489BTVSRD0UH9",
-   "teamId": "016VG9A9M4000000VV0AG80NVSTF8QA3",
-   "label": "U15",
-   "date": "2026-11-14",
-   "time": "13:00",
-   "home": "JFG Rothsee Süd",
-   "guest": "ASV Weisendorf",
-   "homeClubId": "016G94T91K000000VV0AG80NVUNAS2C2",
-   "guestClubId": "00ES8GNKTO00000LVV0AG08LVUPGND5I",
-   "isHome": true,
-   "opponent": "ASV Weisendorf",
-   "result": "",
-   "competition": "U 15 (C-Jun.) BOL Mittelfranken",
-   "competitionType": "Meisterschaften"
-  },
-  {
    "id": "031LH9QGSG000000VS5489BTVSRD0UH9",
    "teamId": "017F5H48CG000000VV0AG811VVU4E1VH",
    "label": "U17",
@@ -903,22 +623,6 @@
    "opponent": "ATSV Erlangen",
    "result": "",
    "competition": "U 17 (B-Jun.) BOL Mittelfranken",
-   "competitionType": "Meisterschaften"
-  },
-  {
-   "id": "031LH5A9AO000000VS5489BTVSRD0UH9",
-   "teamId": "016VG9A9M4000000VV0AG80NVSTF8QA3",
-   "label": "U15",
-   "date": "2026-11-21",
-   "time": "10:00",
-   "home": "SC 04 Schwabach",
-   "guest": "JFG Rothsee Süd",
-   "homeClubId": "00ES8GNKM800001FVV0AG08LVUPGND5I",
-   "guestClubId": "016G94T91K000000VV0AG80NVUNAS2C2",
-   "isHome": false,
-   "opponent": "SC 04 Schwabach",
-   "result": "",
-   "competition": "U 15 (C-Jun.) BOL Mittelfranken",
    "competitionType": "Meisterschaften"
   },
   {
@@ -954,22 +658,6 @@
    "competitionType": "Meisterschaften"
   },
   {
-   "id": "031LH5A92C000000VS5489BTVSRD0UH9",
-   "teamId": "016VG9A9M4000000VV0AG80NVSTF8QA3",
-   "label": "U15",
-   "date": "2026-11-28",
-   "time": "13:00",
-   "home": "JFG Rothsee Süd",
-   "guest": "ASV Neumarkt",
-   "homeClubId": "016G94T91K000000VV0AG80NVUNAS2C2",
-   "guestClubId": "00ES8GNKJO00000NVV0AG08LVUPGND5I",
-   "isHome": true,
-   "opponent": "ASV Neumarkt",
-   "result": "",
-   "competition": "U 15 (C-Jun.) BOL Mittelfranken",
-   "competitionType": "Meisterschaften"
-  },
-  {
    "id": "031LH9QGG8000000VS5489BTVSRD0UH9",
    "teamId": "017F5H48CG000000VV0AG811VVU4E1VH",
    "label": "U17",
@@ -983,22 +671,6 @@
    "opponent": "FSV Erlangen-Bruck",
    "result": "",
    "competition": "U 17 (B-Jun.) BOL Mittelfranken",
-   "competitionType": "Meisterschaften"
-  },
-  {
-   "id": "031LH5ABNC000000VS5489BTVSRD0UH9",
-   "teamId": "016VG9A9M4000000VV0AG80NVSTF8QA3",
-   "label": "U15",
-   "date": "2026-12-05",
-   "time": "13:00",
-   "home": "JFG Rothsee Süd",
-   "guest": "BSC Woffenbach",
-   "homeClubId": "016G94T91K000000VV0AG80NVUNAS2C2",
-   "guestClubId": "00ES8GNKL000000BVV0AG08LVUPGND5I",
-   "isHome": true,
-   "opponent": "BSC Woffenbach",
-   "result": "",
-   "competition": "U 15 (C-Jun.) BOL Mittelfranken",
    "competitionType": "Meisterschaften"
   },
   {
@@ -1034,22 +706,6 @@
    "competitionType": "Freundschaftsspiele"
   },
   {
-   "id": "032HQ8BERK000000VS5489BTVU989P58",
-   "teamId": "016VG9A9M4000000VV0AG80NVSTF8QA3",
-   "label": "U15",
-   "date": "2027-02-07",
-   "time": "10:00",
-   "home": "SG QUELLE Fürth U15",
-   "guest": "JFG Rothsee Süd",
-   "homeClubId": "00ES8GNKEO000006VV0AG08LVUPGND5I",
-   "guestClubId": "016G94T91K000000VV0AG80NVUNAS2C2",
-   "isHome": false,
-   "opponent": "SG QUELLE Fürth U15",
-   "result": "",
-   "competition": "Freundschaftsspiel",
-   "competitionType": "Freundschaftsspiele"
-  },
-  {
    "id": "032FH65IJG000000VS5489BTVU989P58",
    "teamId": "017F5H48CG000000VV0AG811VVU4E1VH",
    "label": "U17",
@@ -1066,38 +722,6 @@
    "competitionType": "Freundschaftsspiele"
   },
   {
-   "id": "032ERS17E0000000VS5489BTVU989P58",
-   "teamId": "016VG9A9M4000000VV0AG80NVSTF8QA3",
-   "label": "U15",
-   "date": "2027-02-27",
-   "time": "16:15",
-   "home": "VfB Eichstätt",
-   "guest": "JFG Rothsee Süd",
-   "homeClubId": "00ES8GNHN4000008VV0AG08LVUPGND5I",
-   "guestClubId": "016G94T91K000000VV0AG80NVUNAS2C2",
-   "isHome": false,
-   "opponent": "VfB Eichstätt",
-   "result": "",
-   "competition": "Freundschaftsspiel",
-   "competitionType": "Freundschaftsspiele"
-  },
-  {
-   "id": "031LH5AH5G000000VS5489BTVSRD0UH9",
-   "teamId": "016VG9A9M4000000VV0AG80NVSTF8QA3",
-   "label": "U15",
-   "date": "2027-03-06",
-   "time": "13:00",
-   "home": "JFG Rothsee Süd",
-   "guest": "Post SV Nürnberg",
-   "homeClubId": "016G94T91K000000VV0AG80NVUNAS2C2",
-   "guestClubId": "00ES8GNKG000000JVV0AG08LVUPGND5I",
-   "isHome": true,
-   "opponent": "Post SV Nürnberg",
-   "result": "",
-   "competition": "U 15 (C-Jun.) BOL Mittelfranken",
-   "competitionType": "Meisterschaften"
-  },
-  {
    "id": "031LH9QO68000000VS5489BTVSRD0UH9",
    "teamId": "017F5H48CG000000VV0AG811VVU4E1VH",
    "label": "U17",
@@ -1111,22 +735,6 @@
    "opponent": "SVG Steinachgrund",
    "result": "",
    "competition": "U 17 (B-Jun.) BOL Mittelfranken",
-   "competitionType": "Meisterschaften"
-  },
-  {
-   "id": "031LH5AGIG000000VS5489BTVSRD0UH9",
-   "teamId": "016VG9A9M4000000VV0AG80NVSTF8QA3",
-   "label": "U15",
-   "date": "2027-03-13",
-   "time": "11:00",
-   "home": "BSC Woffenbach",
-   "guest": "JFG Rothsee Süd",
-   "homeClubId": "00ES8GNKL000000BVV0AG08LVUPGND5I",
-   "guestClubId": "016G94T91K000000VV0AG80NVUNAS2C2",
-   "isHome": false,
-   "opponent": "BSC Woffenbach",
-   "result": "",
-   "competition": "U 15 (C-Jun.) BOL Mittelfranken",
    "competitionType": "Meisterschaften"
   },
   {
@@ -1162,22 +770,6 @@
    "competitionType": "Meisterschaften"
   },
   {
-   "id": "031LH5AG1K000000VS5489BTVSRD0UH9",
-   "teamId": "016VG9A9M4000000VV0AG80NVSTF8QA3",
-   "label": "U15",
-   "date": "2027-03-20",
-   "time": "13:00",
-   "home": "JFG Rothsee Süd",
-   "guest": "TSV Buch",
-   "homeClubId": "016G94T91K000000VV0AG80NVUNAS2C2",
-   "guestClubId": "00ES8GNKEO00000LVV0AG08LVUPGND5I",
-   "isHome": true,
-   "opponent": "TSV Buch",
-   "result": "",
-   "competition": "U 15 (C-Jun.) BOL Mittelfranken",
-   "competitionType": "Meisterschaften"
-  },
-  {
    "id": "031LH9QNK4000000VS5489BTVSRD0UH9",
    "teamId": "017F5H48CG000000VV0AG811VVU4E1VH",
    "label": "U17",
@@ -1207,22 +799,6 @@
    "opponent": "TSV Buch",
    "result": "",
    "competition": "U 17 (B-Jun.) BOL Mittelfranken",
-   "competitionType": "Meisterschaften"
-  },
-  {
-   "id": "031LH5AFLG000000VS5489BTVSRD0UH9",
-   "teamId": "016VG9A9M4000000VV0AG80NVSTF8QA3",
-   "label": "U15",
-   "date": "2027-04-04",
-   "time": "10:30",
-   "home": "FSV Erlangen-Bruck",
-   "guest": "JFG Rothsee Süd",
-   "homeClubId": "00ES8GNKR800001CVV0AG08LVUPGND5I",
-   "guestClubId": "016G94T91K000000VV0AG80NVUNAS2C2",
-   "isHome": false,
-   "opponent": "FSV Erlangen-Bruck",
-   "result": "",
-   "competition": "U 15 (C-Jun.) BOL Mittelfranken",
    "competitionType": "Meisterschaften"
   },
   {
@@ -1258,22 +834,6 @@
    "competitionType": "Meisterschaften"
   },
   {
-   "id": "031LH5AFDS000000VS5489BTVSRD0UH9",
-   "teamId": "016VG9A9M4000000VV0AG80NVSTF8QA3",
-   "label": "U15",
-   "date": "2027-04-10",
-   "time": "13:00",
-   "home": "JFG Rothsee Süd",
-   "guest": "1. SC Feucht",
-   "homeClubId": "016G94T91K000000VV0AG80NVUNAS2C2",
-   "guestClubId": "00ES8GNKIG00001DVV0AG08LVUPGND5I",
-   "isHome": true,
-   "opponent": "1. SC Feucht",
-   "result": "",
-   "competition": "U 15 (C-Jun.) BOL Mittelfranken",
-   "competitionType": "Meisterschaften"
-  },
-  {
    "id": "031LH9QMNK000000VS5489BTVSRD0UH9",
    "teamId": "017F5H48CG000000VV0AG811VVU4E1VH",
    "label": "U17",
@@ -1303,22 +863,6 @@
    "opponent": "TV 21 Büchenbach",
    "result": "",
    "competition": "U 13 (D-Jun.) BOL Mittelfranken",
-   "competitionType": "Meisterschaften"
-  },
-  {
-   "id": "031LH5AERK000000VS5489BTVSRD0UH9",
-   "teamId": "016VG9A9M4000000VV0AG80NVSTF8QA3",
-   "label": "U15",
-   "date": "2027-04-17",
-   "time": "12:00",
-   "home": "SC Eltersdorf",
-   "guest": "JFG Rothsee Süd",
-   "homeClubId": "00ES8GNKR8000011VV0AG08LVUPGND5I",
-   "guestClubId": "016G94T91K000000VV0AG80NVUNAS2C2",
-   "isHome": false,
-   "opponent": "SC Eltersdorf",
-   "result": "",
-   "competition": "U 15 (C-Jun.) BOL Mittelfranken",
    "competitionType": "Meisterschaften"
   },
   {
@@ -1370,22 +914,6 @@
    "competitionType": "Meisterschaften"
   },
   {
-   "id": "031LH5AEG8000000VS5489BTVSRD0UH9",
-   "teamId": "016VG9A9M4000000VV0AG80NVSTF8QA3",
-   "label": "U15",
-   "date": "2027-04-24",
-   "time": "13:00",
-   "home": "JFG Rothsee Süd",
-   "guest": "1. FC Nürnberg U17w",
-   "homeClubId": "016G94T91K000000VV0AG80NVUNAS2C2",
-   "guestClubId": "00ES8GNKEO00001HVV0AG08LVUPGND5I",
-   "isHome": true,
-   "opponent": "1. FC Nürnberg U17w",
-   "result": "",
-   "competition": "U 15 (C-Jun.) BOL Mittelfranken",
-   "competitionType": "Meisterschaften"
-  },
-  {
    "id": "031LH9QLQK000000VS5489BTVSRD0UH9",
    "teamId": "017F5H48CG000000VV0AG811VVU4E1VH",
    "label": "U17",
@@ -1434,22 +962,6 @@
    "competitionType": "Meisterschaften"
   },
   {
-   "id": "031LH5AE28000000VS5489BTVSRD0UH9",
-   "teamId": "016VG9A9M4000000VV0AG80NVSTF8QA3",
-   "label": "U15",
-   "date": "2027-05-02",
-   "time": "",
-   "home": "SPIELFREI",
-   "guest": "JFG Rothsee Süd",
-   "homeClubId": "",
-   "guestClubId": "016G94T91K000000VV0AG80NVUNAS2C2",
-   "isHome": false,
-   "opponent": "SPIELFREI",
-   "result": "",
-   "competition": "U 15 (C-Jun.) BOL Mittelfranken",
-   "competitionType": "Meisterschaften"
-  },
-  {
    "id": "031LGSVURC000000VS5489BTVSRD0UH9",
    "teamId": "017F65UHF0000000VV0AG80NVVSGSEQ6",
    "label": "U13",
@@ -1463,22 +975,6 @@
    "opponent": "TSV 1860 Weißenburg",
    "result": "",
    "competition": "U 13 (D-Jun.) BOL Mittelfranken",
-   "competitionType": "Meisterschaften"
-  },
-  {
-   "id": "031LH5AD7O000000VS5489BTVSRD0UH9",
-   "teamId": "016VG9A9M4000000VV0AG80NVSTF8QA3",
-   "label": "U15",
-   "date": "2027-05-08",
-   "time": "13:00",
-   "home": "JFG Rothsee Süd",
-   "guest": "TSV 1946 Altenberg",
-   "homeClubId": "016G94T91K000000VV0AG80NVUNAS2C2",
-   "guestClubId": "00ES8GNKDG000012VV0AG08LVUPGND5I",
-   "isHome": true,
-   "opponent": "TSV 1946 Altenberg",
-   "result": "",
-   "competition": "U 15 (C-Jun.) BOL Mittelfranken",
    "competitionType": "Meisterschaften"
   },
   {
@@ -1514,38 +1010,6 @@
    "competitionType": "Meisterschaften"
   },
   {
-   "id": "031LH5ADM0000000VS5489BTVSRD0UH9",
-   "teamId": "016VG9A9M4000000VV0AG80NVSTF8QA3",
-   "label": "U15",
-   "date": "2027-05-12",
-   "time": "18:30",
-   "home": "TV 1848 Erlangen",
-   "guest": "JFG Rothsee Süd",
-   "homeClubId": "00ES8GNKR8000018VV0AG08LVUPGND5I",
-   "guestClubId": "016G94T91K000000VV0AG80NVUNAS2C2",
-   "isHome": false,
-   "opponent": "TV 1848 Erlangen",
-   "result": "",
-   "competition": "U 15 (C-Jun.) BOL Mittelfranken",
-   "competitionType": "Meisterschaften"
-  },
-  {
-   "id": "031LH5AD0G000000VS5489BTVSRD0UH9",
-   "teamId": "016VG9A9M4000000VV0AG80NVSTF8QA3",
-   "label": "U15",
-   "date": "2027-06-05",
-   "time": "10:30",
-   "home": "ASV Weisendorf",
-   "guest": "JFG Rothsee Süd",
-   "homeClubId": "00ES8GNKTO00000LVV0AG08LVUPGND5I",
-   "guestClubId": "016G94T91K000000VV0AG80NVUNAS2C2",
-   "isHome": false,
-   "opponent": "ASV Weisendorf",
-   "result": "",
-   "competition": "U 15 (C-Jun.) BOL Mittelfranken",
-   "competitionType": "Meisterschaften"
-  },
-  {
    "id": "031LGSVUK8000000VS5489BTVSRD0UH9",
    "teamId": "017F65UHF0000000VV0AG80NVVSGSEQ6",
    "label": "U13",
@@ -1575,22 +1039,6 @@
    "opponent": "ATSV Erlangen",
    "result": "",
    "competition": "U 17 (B-Jun.) BOL Mittelfranken",
-   "competitionType": "Meisterschaften"
-  },
-  {
-   "id": "031LH5ACQC000000VS5489BTVSRD0UH9",
-   "teamId": "016VG9A9M4000000VV0AG80NVSTF8QA3",
-   "label": "U15",
-   "date": "2027-06-12",
-   "time": "13:00",
-   "home": "JFG Rothsee Süd",
-   "guest": "SC 04 Schwabach",
-   "homeClubId": "016G94T91K000000VV0AG80NVUNAS2C2",
-   "guestClubId": "00ES8GNKM800001FVV0AG08LVUPGND5I",
-   "isHome": true,
-   "opponent": "SC 04 Schwabach",
-   "result": "",
-   "competition": "U 15 (C-Jun.) BOL Mittelfranken",
    "competitionType": "Meisterschaften"
   },
   {
@@ -1639,22 +1087,6 @@
    "opponent": "SG QUELLE Fürth 3",
    "result": "",
    "competition": "U 13 (D-Jun.) BOL Mittelfranken",
-   "competitionType": "Meisterschaften"
-  },
-  {
-   "id": "031LH5ACB0000000VS5489BTVSRD0UH9",
-   "teamId": "016VG9A9M4000000VV0AG80NVSTF8QA3",
-   "label": "U15",
-   "date": "2027-06-19",
-   "time": "11:30",
-   "home": "ASV Neumarkt",
-   "guest": "JFG Rothsee Süd",
-   "homeClubId": "00ES8GNKJO00000NVV0AG08LVUPGND5I",
-   "guestClubId": "016G94T91K000000VV0AG80NVUNAS2C2",
-   "isHome": false,
-   "opponent": "ASV Neumarkt",
-   "result": "",
-   "competition": "U 15 (C-Jun.) BOL Mittelfranken",
    "competitionType": "Meisterschaften"
   },
   {
@@ -1709,16 +1141,6 @@
   "00ES8GNKR800000FVV0AG08LVUPGND5I": "logos/00ES8GNKR800000FVV0AG08LVUPGND5I.png",
   "00ES8GNKR8000012VV0AG08LVUPGND5I": "logos/00ES8GNKR8000012VV0AG08LVUPGND5I.png",
   "00ES8GNKDG000019VV0AG08LVUPGND5I": "logos/00ES8GNKDG000019VV0AG08LVUPGND5I.png",
-  "00ES8GNKR800001CVV0AG08LVUPGND5I": "logos/00ES8GNKR800001CVV0AG08LVUPGND5I.png",
-  "00ES8GNKJO00000NVV0AG08LVUPGND5I": "logos/00ES8GNKJO00000NVV0AG08LVUPGND5I.png",
-  "00ES8GNKL0000000VV0AG08LVUPGND5I": "logos/00ES8GNKL0000000VV0AG08LVUPGND5I.png",
-  "00ES8GNKIG00001DVV0AG08LVUPGND5I": "logos/00ES8GNKIG00001DVV0AG08LVUPGND5I.png",
-  "00ES8GNKJO00000AVV0AG08LVUPGND5I": "logos/00ES8GNKJO00000AVV0AG08LVUPGND5I.png",
-  "00ES8GNKEO00001HVV0AG08LVUPGND5I": "logos/00ES8GNKEO00001HVV0AG08LVUPGND5I.png",
-  "00ES8GNKR8000018VV0AG08LVUPGND5I": "logos/00ES8GNKR8000018VV0AG08LVUPGND5I.png",
-  "01VR2LQM88000000VS54898FVU8D1IS3": "logos/01VR2LQM88000000VS54898FVU8D1IS3.png",
-  "00ES8GNKDG000012VV0AG08LVUPGND5I": "logos/00ES8GNKDG000012VV0AG08LVUPGND5I.png",
-  "00ES8GNKL000000BVV0AG08LVUPGND5I": "logos/00ES8GNKL000000BVV0AG08LVUPGND5I.png",
-  "00ES8GNHN4000008VV0AG08LVUPGND5I": "logos/00ES8GNHN4000008VV0AG08LVUPGND5I.png"
+  "00ES8GNKR800001CVV0AG08LVUPGND5I": "logos/00ES8GNKR800001CVV0AG08LVUPGND5I.png"
  }
 }
