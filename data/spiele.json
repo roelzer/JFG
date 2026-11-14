@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-10T17:00:08.782Z",
+ "updated": "2026-11-14T13:31:40.820Z",
  "club": {
   "name": "JFG Rothsee Süd",
   "instagram": "@rothseekicker",
@@ -869,7 +869,7 @@
    "guestClubId": "00ES8GNKM800001FVV0AG08LVUPGND5I",
    "isHome": true,
    "opponent": "SC 04 Schwabach",
-   "result": "",
+   "result": "7:3",
    "competition": "U 13 (D-Jun.) BOL Mittelfranken",
    "competitionType": "Meisterschaften"
   },
@@ -885,7 +885,7 @@
    "guestClubId": "00ES8GNKTO00000LVV0AG08LVUPGND5I",
    "isHome": true,
    "opponent": "ASV Weisendorf",
-   "result": "",
+   "result": "3:0",
    "competition": "U 15 (C-Jun.) BOL Mittelfranken",
    "competitionType": "Meisterschaften"
   },
