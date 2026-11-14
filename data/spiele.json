@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-14T15:22:27.477Z",
+ "updated": "2026-11-14T19:55:11.228Z",
  "club": {
   "name": "JFG Rothsee Süd",
   "instagram": "@rothseekicker",
@@ -36,6 +36,14 @@
    "name": "JFG Rothsee Süd",
    "typeName": "C-Junioren",
    "competition": "U 15 (C-Jun.) BOL Mittelfranken",
+   "label": "U15",
+   "clubId": "016G94T91K000000VV0AG80NVUNAS2C2"
+  },
+  {
+   "id": "02JR5RU0A0000000VS5489B1VVFL9LLH",
+   "name": "JFG Rothsee Süd",
+   "typeName": "C-Junioren",
+   "competition": "C1-Jun. 1. Rd. Gr 1",
    "label": "U15",
    "clubId": "016G94T91K000000VV0AG80NVUNAS2C2"
   }
@@ -986,6 +994,70 @@
    "competitionType": "Meisterschaften"
   },
   {
+   "id": "032JR1TPU4000000VS5489BTVU989P58",
+   "teamId": "02JR5RU0A0000000VS5489B1VVFL9LLH",
+   "label": "U15",
+   "date": "2026-11-29",
+   "time": "17:00",
+   "home": "JFG Rothsee Süd",
+   "guest": "(SG) 1. FC-VfL Pleinfeld",
+   "homeClubId": "016G94T91K000000VV0AG80NVUNAS2C2",
+   "guestClubId": "00ES8GNKM800000SVV0AG08LVUPGND5I",
+   "isHome": true,
+   "opponent": "(SG) 1. FC-VfL Pleinfeld",
+   "result": "",
+   "competition": "C1-Jun. 1. Rd. Gr 3",
+   "competitionType": "Hallenturniere (Futsal)"
+  },
+  {
+   "id": "032JR1TPVK000000VS5489BTVU989P58",
+   "teamId": "02JR5RU0A0000000VS5489B1VVFL9LLH",
+   "label": "U15",
+   "date": "2026-11-29",
+   "time": "17:30",
+   "home": "TSG 08 Roth",
+   "guest": "JFG Rothsee Süd",
+   "homeClubId": "00ES8GNKM8000017VV0AG08LVUPGND5I",
+   "guestClubId": "016G94T91K000000VV0AG80NVUNAS2C2",
+   "isHome": false,
+   "opponent": "TSG 08 Roth",
+   "result": "",
+   "competition": "C1-Jun. 1. Rd. Gr 3",
+   "competitionType": "Hallenturniere (Futsal)"
+  },
+  {
+   "id": "032JR1TQ14000000VS5489BTVU989P58",
+   "teamId": "02JR5RU0A0000000VS5489B1VVFL9LLH",
+   "label": "U15",
+   "date": "2026-11-29",
+   "time": "18:00",
+   "home": "JFG Rothsee Süd",
+   "guest": "(SG) FC Nagelberg",
+   "homeClubId": "016G94T91K000000VV0AG80NVUNAS2C2",
+   "guestClubId": "019P1AUGJK000000VV0AG80NVV9SUQL6",
+   "isHome": true,
+   "opponent": "(SG) FC Nagelberg",
+   "result": "",
+   "competition": "C1-Jun. 1. Rd. Gr 3",
+   "competitionType": "Hallenturniere (Futsal)"
+  },
+  {
+   "id": "032JR1TQ2O000000VS5489BTVU989P58",
+   "teamId": "02JR5RU0A0000000VS5489B1VVFL9LLH",
+   "label": "U15",
+   "date": "2026-11-29",
+   "time": "18:30",
+   "home": "JFG Schloßberger Land",
+   "guest": "JFG Rothsee Süd",
+   "homeClubId": "030RE5HISC000000VS5489C2VTHLIB02",
+   "guestClubId": "016G94T91K000000VV0AG80NVUNAS2C2",
+   "isHome": false,
+   "opponent": "JFG Schloßberger Land",
+   "result": "",
+   "competition": "C1-Jun. 1. Rd. Gr 3",
+   "competitionType": "Hallenturniere (Futsal)"
+  },
+  {
    "id": "031LH5ABNC000000VS5489BTVSRD0UH9",
    "teamId": "016VG9A9M4000000VV0AG80NVSTF8QA3",
    "label": "U15",
@@ -1719,6 +1791,9 @@
   "01VR2LQM88000000VS54898FVU8D1IS3": "logos/01VR2LQM88000000VS54898FVU8D1IS3.png",
   "00ES8GNKDG000012VV0AG08LVUPGND5I": "logos/00ES8GNKDG000012VV0AG08LVUPGND5I.png",
   "00ES8GNKL000000BVV0AG08LVUPGND5I": "logos/00ES8GNKL000000BVV0AG08LVUPGND5I.png",
-  "00ES8GNHN4000008VV0AG08LVUPGND5I": "logos/00ES8GNHN4000008VV0AG08LVUPGND5I.png"
+  "00ES8GNHN4000008VV0AG08LVUPGND5I": "logos/00ES8GNHN4000008VV0AG08LVUPGND5I.png",
+  "00ES8GNKM800000SVV0AG08LVUPGND5I": "logos/00ES8GNKM800000SVV0AG08LVUPGND5I.png",
+  "019P1AUGJK000000VV0AG80NVV9SUQL6": "logos/019P1AUGJK000000VV0AG80NVV9SUQL6.png",
+  "030RE5HISC000000VS5489C2VTHLIB02": "logos/030RE5HISC000000VS5489C2VTHLIB02.png"
  }
 }
