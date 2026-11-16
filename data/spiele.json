@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-14T19:55:11.228Z",
+ "updated": "2026-11-16T11:08:14.554Z",
  "club": {
   "name": "JFG Rothsee Süd",
   "instagram": "@rothseekicker",
@@ -712,12 +712,12 @@
    "date": "2026-10-25",
    "time": "12:00",
    "home": "JFG Rothsee Süd",
-   "guest": " (JFG Jura-Schwarzachtal)",
+   "guest": "JFG Jura-Schwarzachtal",
    "homeClubId": "016G94T91K000000VV0AG80NVUNAS2C2",
    "guestClubId": "00V7CV4QQO000000VV0AG811VTEQ0GTM",
    "isHome": true,
-   "opponent": " (JFG Jura-Schwarzachtal)",
-   "result": "",
+   "opponent": "JFG Jura-Schwarzachtal",
+   "result": "2:0",
    "competition": "U 19 (A-Jun.) KL Neumarkt/Jura Südwest",
    "competitionType": "Meisterschaften"
   },
@@ -792,12 +792,12 @@
    "date": "2026-10-31",
    "time": "15:30",
    "home": "(SG) 1. FC Gunzenhausen",
-   "guest": " (JFG Rothsee Süd)",
+   "guest": "JFG Rothsee Süd",
    "homeClubId": "00ES8GNKL000001FVV0AG08LVUPGND5I",
    "guestClubId": "016G94T91K000000VV0AG80NVUNAS2C2",
    "isHome": false,
    "opponent": "(SG) 1. FC Gunzenhausen",
-   "result": "",
+   "result": "2:0",
    "competition": "U 19 (A-Jun.) KL Neumarkt/Jura Südwest",
    "competitionType": "Meisterschaften"
   },
