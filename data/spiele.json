@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-19T11:33:30.743Z",
+ "updated": "2026-11-19T20:30:38.637Z",
  "club": {
   "name": "JFG Rothsee Süd",
   "instagram": "@rothseekicker",
@@ -45,6 +45,14 @@
    "typeName": "C-Junioren",
    "competition": "C1-Jun. 1. Rd. Gr 1",
    "label": "U15",
+   "clubId": "016G94T91K000000VV0AG80NVUNAS2C2"
+  },
+  {
+   "id": "02JR5S1M5C000000VS5489B1VVFL9LLH",
+   "name": "JFG Rothsee Süd",
+   "typeName": "D-Junioren",
+   "competition": "Gruppe A",
+   "label": "U13",
    "clubId": "016G94T91K000000VV0AG80NVUNAS2C2"
   },
   {
@@ -922,6 +930,38 @@
    "competitionType": "Meisterschaften"
   },
   {
+   "id": "032OHEBJFS000000VS5489BUVT7T9F23",
+   "teamId": "02JR5S1M5C000000VS5489B1VVFL9LLH",
+   "label": "U13",
+   "date": "2026-11-21",
+   "time": "08:30",
+   "home": "JFG Rothsee Süd",
+   "guest": "TSV Südwest Nürnberg",
+   "homeClubId": "016G94T91K000000VV0AG80NVUNAS2C2",
+   "guestClubId": "00ES8GNKG000000NVV0AG08LVUPGND5I",
+   "isHome": true,
+   "opponent": "TSV Südwest Nürnberg",
+   "result": "",
+   "competition": "Gruppe A",
+   "competitionType": "Hallenturniere (Futsal)"
+  },
+  {
+   "id": "032OHEBJI4000000VS5489BUVT7T9F23",
+   "teamId": "02JR5S1M5C000000VS5489B1VVFL9LLH",
+   "label": "U13",
+   "date": "2026-11-21",
+   "time": "09:18",
+   "home": "FC Eintracht Bamberg U13 (FB, DJ)",
+   "guest": "JFG Rothsee Süd",
+   "homeClubId": "017JGJACJO000000VV0AG811VU45M4RK",
+   "guestClubId": "016G94T91K000000VV0AG80NVUNAS2C2",
+   "isHome": false,
+   "opponent": "FC Eintracht Bamberg U13 (FB, DJ)",
+   "result": "",
+   "competition": "Gruppe A",
+   "competitionType": "Hallenturniere (Futsal)"
+  },
+  {
    "id": "031LH5A9AO000000VS5489BTVSRD0UH9",
    "teamId": "016VG9A9M4000000VV0AG80NVSTF8QA3",
    "label": "U15",
@@ -936,6 +976,38 @@
    "result": "",
    "competition": "U 15 (C-Jun.) BOL Mittelfranken",
    "competitionType": "Meisterschaften"
+  },
+  {
+   "id": "032OHEBJJG000000VS5489BUVT7T9F23",
+   "teamId": "02JR5S1M5C000000VS5489B1VVFL9LLH",
+   "label": "U13",
+   "date": "2026-11-21",
+   "time": "10:18",
+   "home": "JFG Rothsee Süd",
+   "guest": "SK Heuchling",
+   "homeClubId": "016G94T91K000000VV0AG80NVUNAS2C2",
+   "guestClubId": "00ES8GNKH8000010VV0AG08LVUPGND5I",
+   "isHome": true,
+   "opponent": "SK Heuchling",
+   "result": "",
+   "competition": "Gruppe A",
+   "competitionType": "Hallenturniere (Futsal)"
+  },
+  {
+   "id": "032OHEBJKC000000VS5489BUVT7T9F23",
+   "teamId": "02JR5S1M5C000000VS5489B1VVFL9LLH",
+   "label": "U13",
+   "date": "2026-11-21",
+   "time": "11:06",
+   "home": "ESV Ansbach/Eyb",
+   "guest": "JFG Rothsee Süd",
+   "homeClubId": "00ES8GNKNG00000VVV0AG08LVUPGND5I",
+   "guestClubId": "016G94T91K000000VV0AG80NVUNAS2C2",
+   "isHome": false,
+   "opponent": "ESV Ansbach/Eyb",
+   "result": "",
+   "competition": "Gruppe A",
+   "competitionType": "Hallenturniere (Futsal)"
   },
   {
    "id": "032OHJKFLK000000VS5489BUVT7T9F23",
@@ -1867,6 +1939,10 @@
   "00ES8GNKM800000SVV0AG08LVUPGND5I": "logos/00ES8GNKM800000SVV0AG08LVUPGND5I.png",
   "019P1AUGJK000000VV0AG80NVV9SUQL6": "logos/019P1AUGJK000000VV0AG80NVV9SUQL6.png",
   "030RE5HISC000000VS5489C2VTHLIB02": "logos/030RE5HISC000000VS5489C2VTHLIB02.png",
+  "00ES8GNKG000000NVV0AG08LVUPGND5I": "logos/00ES8GNKG000000NVV0AG08LVUPGND5I.png",
+  "017JGJACJO000000VV0AG811VU45M4RK": "logos/017JGJACJO000000VV0AG811VU45M4RK.png",
+  "00ES8GNKH8000010VV0AG08LVUPGND5I": "logos/00ES8GNKH8000010VV0AG08LVUPGND5I.png",
+  "00ES8GNKNG00000VVV0AG08LVUPGND5I": "logos/00ES8GNKNG00000VVV0AG08LVUPGND5I.png",
   "00ES8GNKV000000SVV0AG08LVUPGND5I": "logos/00ES8GNKV000000SVV0AG08LVUPGND5I.png",
   "00ES8GNHKK000005VV0AG08LVUPGND5I": "logos/00ES8GNHKK000005VV0AG08LVUPGND5I.png"
  }
