@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-16T11:08:14.554Z",
+ "updated": "2026-11-19T11:33:30.743Z",
  "club": {
   "name": "JFG Rothsee Süd",
   "instagram": "@rothseekicker",
@@ -45,6 +45,14 @@
    "typeName": "C-Junioren",
    "competition": "C1-Jun. 1. Rd. Gr 1",
    "label": "U15",
+   "clubId": "016G94T91K000000VV0AG80NVUNAS2C2"
+  },
+  {
+   "id": "02JR5S2GTC000000VS5489B1VVFL9LLH",
+   "name": "JFG Rothsee Süd 2",
+   "typeName": "D-Junioren",
+   "competition": "Gruppe A",
+   "label": "U13 2",
    "clubId": "016G94T91K000000VV0AG80NVUNAS2C2"
   }
  ],
@@ -930,6 +938,70 @@
    "competitionType": "Meisterschaften"
   },
   {
+   "id": "032OHJKFLK000000VS5489BUVT7T9F23",
+   "teamId": "02JR5S2GTC000000VS5489B1VVFL9LLH",
+   "label": "U13 2",
+   "date": "2026-11-21",
+   "time": "14:00",
+   "home": "JFG Rothsee Süd 2",
+   "guest": "TSV 1877 Gerbrunn",
+   "homeClubId": "016G94T91K000000VV0AG80NVUNAS2C2",
+   "guestClubId": "00ES8GNKV000000SVV0AG08LVUPGND5I",
+   "isHome": true,
+   "opponent": "TSV 1877 Gerbrunn",
+   "result": "",
+   "competition": "Gruppe A",
+   "competitionType": "Hallenturniere (Futsal)"
+  },
+  {
+   "id": "032OHJKFN0000000VS5489BUVT7T9F23",
+   "teamId": "02JR5S2GTC000000VS5489B1VVFL9LLH",
+   "label": "U13 2",
+   "date": "2026-11-21",
+   "time": "14:44",
+   "home": "SpVgg Erlangen D1",
+   "guest": "JFG Rothsee Süd 2",
+   "homeClubId": "00ES8GNKR800001AVV0AG08LVUPGND5I",
+   "guestClubId": "016G94T91K000000VV0AG80NVUNAS2C2",
+   "isHome": false,
+   "opponent": "SpVgg Erlangen D1",
+   "result": "",
+   "competition": "Gruppe A",
+   "competitionType": "Hallenturniere (Futsal)"
+  },
+  {
+   "id": "032OHJKFOS000000VS5489BUVT7T9F23",
+   "teamId": "02JR5S2GTC000000VS5489B1VVFL9LLH",
+   "label": "U13 2",
+   "date": "2026-11-21",
+   "time": "15:39",
+   "home": "JFG Rothsee Süd 2",
+   "guest": "SV Gutenstetten-Steinachgrund",
+   "homeClubId": "016G94T91K000000VV0AG80NVUNAS2C2",
+   "guestClubId": "00ES8GNKOO00000NVV0AG08LVUPGND5I",
+   "isHome": true,
+   "opponent": "SV Gutenstetten-Steinachgrund",
+   "result": "",
+   "competition": "Gruppe A",
+   "competitionType": "Hallenturniere (Futsal)"
+  },
+  {
+   "id": "032OHJKFQ8000000VS5489BUVT7T9F23",
+   "teamId": "02JR5S2GTC000000VS5489B1VVFL9LLH",
+   "label": "U13 2",
+   "date": "2026-11-21",
+   "time": "16:23",
+   "home": "SG Lech-Ammersee U13 I",
+   "guest": "JFG Rothsee Süd 2",
+   "homeClubId": "00ES8GNHKK000005VV0AG08LVUPGND5I",
+   "guestClubId": "016G94T91K000000VV0AG80NVUNAS2C2",
+   "isHome": false,
+   "opponent": "SG Lech-Ammersee U13 I",
+   "result": "",
+   "competition": "Gruppe A",
+   "competitionType": "Hallenturniere (Futsal)"
+  },
+  {
    "id": "031LGSVT1K000000VS5489BTVSRD0UH9",
    "teamId": "017F65UHF0000000VV0AG80NVVSGSEQ6",
    "label": "U13",
@@ -1794,6 +1866,8 @@
   "00ES8GNHN4000008VV0AG08LVUPGND5I": "logos/00ES8GNHN4000008VV0AG08LVUPGND5I.png",
   "00ES8GNKM800000SVV0AG08LVUPGND5I": "logos/00ES8GNKM800000SVV0AG08LVUPGND5I.png",
   "019P1AUGJK000000VV0AG80NVV9SUQL6": "logos/019P1AUGJK000000VV0AG80NVV9SUQL6.png",
-  "030RE5HISC000000VS5489C2VTHLIB02": "logos/030RE5HISC000000VS5489C2VTHLIB02.png"
+  "030RE5HISC000000VS5489C2VTHLIB02": "logos/030RE5HISC000000VS5489C2VTHLIB02.png",
+  "00ES8GNKV000000SVV0AG08LVUPGND5I": "logos/00ES8GNKV000000SVV0AG08LVUPGND5I.png",
+  "00ES8GNHKK000005VV0AG08LVUPGND5I": "logos/00ES8GNHKK000005VV0AG08LVUPGND5I.png"
  }
 }
