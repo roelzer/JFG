@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-19T20:30:38.637Z",
+ "updated": "2026-11-20T11:29:48.409Z",
  "club": {
   "name": "JFG Rothsee Süd",
   "instagram": "@rothseekicker",
@@ -1031,12 +1031,12 @@
    "label": "U13 2",
    "date": "2026-11-21",
    "time": "14:44",
-   "home": "SpVgg Erlangen D1",
+   "home": "SpVgg 04 Erlangen (DM)",
    "guest": "JFG Rothsee Süd 2",
    "homeClubId": "00ES8GNKR800001AVV0AG08LVUPGND5I",
    "guestClubId": "016G94T91K000000VV0AG80NVUNAS2C2",
    "isHome": false,
-   "opponent": "SpVgg Erlangen D1",
+   "opponent": "SpVgg 04 Erlangen (DM)",
    "result": "",
    "competition": "Gruppe A",
    "competitionType": "Hallenturniere (Futsal)"
