@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-20T20:09:46.453Z",
+ "updated": "2026-11-21T10:56:13.399Z",
  "club": {
   "name": "JFG Rothsee Süd",
   "instagram": "@rothseekicker",
@@ -51,7 +51,7 @@
    "id": "02JR5S1M5C000000VS5489B1VVFL9LLH",
    "name": "JFG Rothsee Süd",
    "typeName": "D-Junioren",
-   "competition": "Gruppe A",
+   "competition": "Gruppe B",
    "label": "U13",
    "clubId": "016G94T91K000000VV0AG80NVUNAS2C2"
   },
@@ -59,7 +59,7 @@
    "id": "02JR5S2GTC000000VS5489B1VVFL9LLH",
    "name": "JFG Rothsee Süd 2",
    "typeName": "D-Junioren",
-   "competition": "Gruppe A",
+   "competition": "Gruppe B",
    "label": "U13 2",
    "clubId": "016G94T91K000000VV0AG80NVUNAS2C2"
   }
@@ -1005,7 +1005,7 @@
    "guestClubId": "016G94T91K000000VV0AG80NVUNAS2C2",
    "isHome": false,
    "opponent": "SC 04 Schwabach",
-   "result": "",
+   "result": "1:0",
    "competition": "U 15 (C-Jun.) BOL Mittelfranken",
    "competitionType": "Meisterschaften"
   },
