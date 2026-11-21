@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-21T10:56:13.399Z",
+ "updated": "2026-11-21T16:24:35.927Z",
  "club": {
   "name": "JFG Rothsee Süd",
   "instagram": "@rothseekicker",
@@ -51,7 +51,7 @@
    "id": "02JR5S1M5C000000VS5489B1VVFL9LLH",
    "name": "JFG Rothsee Süd",
    "typeName": "D-Junioren",
-   "competition": "Gruppe B",
+   "competition": "Finale",
    "label": "U13",
    "clubId": "016G94T91K000000VV0AG80NVUNAS2C2"
   },
@@ -59,7 +59,7 @@
    "id": "02JR5S2GTC000000VS5489B1VVFL9LLH",
    "name": "JFG Rothsee Süd 2",
    "typeName": "D-Junioren",
-   "competition": "Gruppe B",
+   "competition": "Finale",
    "label": "U13 2",
    "clubId": "016G94T91K000000VV0AG80NVUNAS2C2"
   }
